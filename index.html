@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pokhara Narayani Auto Engineering | 24/7 Emergency Auto Repairing Services</title>
-    <meta name="description" content="Trusted Montreal plumbers offering 24/7 emergency services, drain cleaning, water heater repair, and all residential & commercial plumbing solutions. Call us anytime!">
+    <meta name="description" content="Trusted auto engineering services in Pokhara offering 24/7 emergency repairs, engine diagnostics, transmission services, and all vehicle repair solutions. Call us anytime!">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -30,7 +30,8 @@
         /* Custom CSS */
         .hero-section {
             position: relative;
-            height: 99vh;
+            height: 100vh;
+            min-height: 600px;
             overflow: hidden;
         }
         
@@ -57,6 +58,7 @@
         .hero-content {
             position: relative;
             z-index: 2;
+            padding-top: 80px;
         }
         
         .service-card:hover {
@@ -96,6 +98,30 @@
         .animate-fade-in {
             animation: fadeIn 1s ease-out forwards;
         }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            transition: all 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        
+        /* Tap target sizing for mobile */
+        .tap-target {
+            min-height: 48px;
+            min-width: 48px;
+        }
+        
+        /* Prevent zoom on input focus */
+        @media screen and (max-width: 767px) {
+            input, select, textarea {
+                font-size: 16px !important;
+            }
+        }
     </style>
 </head>
 <body class="font-sans bg-light">
@@ -106,8 +132,8 @@
                 <div class="mr-3 text-primary text-3xl">
                     <i class="fas fa-tools"></i>
                 </div>
-                <a href="#" class="text-3xl font-bold text-primary">
-                    <span class="text-secondary">Pokhara And Narayani</span> Auto Engineering
+                <a href="#" class="text-2xl md:text-3xl font-bold text-primary">
+                    <span class="text-secondary">Pokhara And Narayani</span> Auto
                 </a>
             </div>
             
@@ -117,25 +143,25 @@
                 <a href="#about" class="nav-link text-dark hover:text-accent transition">About</a>
                 <a href="#testimonials" class="nav-link text-dark hover:text-accent transition">Testimonials</a>
                 <a href="#contact" class="nav-link text-dark hover:text-accent transition">Contact</a>
-                <a href="tel:5145551234" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition flex items-center">
+                <a href="tel:+9779861046510" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition flex items-center tap-target">
                     <i class="fas fa-phone mr-2"></i> +977 9861046510
                 </a>
             </div>
             
-            <button id="menu-toggle" class="md:hidden text-2xl text-dark">
+            <button id="menu-toggle" class="md:hidden text-2xl text-dark tap-target" aria-label="Toggle menu">
                 <i class="fas fa-bars"></i>
             </button>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full z-50 mt-12">
+        <div id="mobile-menu" class="mobile-menu md:hidden bg-white shadow-lg absolute w-full z-50">
             <div class="container mx-auto px-4 py-3 flex flex-col">
-                <a href="#" class="py-2 text-dark hover:text-accent">Home</a>
-                <a href="#services" class="py-2 text-dark hover:text-accent">Services</a>
-                <a href="#about" class="py-2 text-dark hover:text-accent">About</a>
-                <a href="#testimonials" class="py-2 text-dark hover:text-accent">Testimonials</a>
-                <a href="#contact" class="py-2 text-dark hover:text-accent">Contact</a>
-                <a href="tel:5145551234" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition my-2 text-center">
+                <a href="#" class="py-3 text-dark hover:text-accent border-b border-gray-100 tap-target">Home</a>
+                <a href="#services" class="py-3 text-dark hover:text-accent border-b border-gray-100 tap-target">Services</a>
+                <a href="#about" class="py-3 text-dark hover:text-accent border-b border-gray-100 tap-target">About</a>
+                <a href="#testimonials" class="py-3 text-dark hover:text-accent border-b border-gray-100 tap-target">Testimonials</a>
+                <a href="#contact" class="py-3 text-dark hover:text-accent border-b border-gray-100 tap-target">Contact</a>
+                <a href="tel:+9779861046510" class="bg-accent text-white px-4 py-3 rounded-lg hover:bg-orange-700 transition my-2 text-center tap-target">
                     <i class="fas fa-phone mr-2"></i> Call Now
                 </a>
             </div>
@@ -151,17 +177,17 @@
         <div class="hero-overlay"></div>
         <div class="hero-content flex items-center justify-center h-full text-white">
             <div class="container mx-auto px-4 text-center">
-                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+                <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
                     Professional Auto Engineering Services <span class="text-accent">in Pokhara</span>
                 </h1>
-                <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.3s;">
+                <p class="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.3s;">
                     24/7 emergency services, private and commercial Auto Engineering Services solutions you can trust.
                 </p>
                 <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-6 animate-fade-in" style="animation-delay: 0.6s;">
-                    <a href="#contact" class="bg-accent hover:bg-orange-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center">
+                    <a href="#contact" class="bg-accent hover:bg-orange-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center tap-target">
                         <i class="fas fa-envelope mr-2"></i> Get a Free Quote
                     </a>
-                    <a href="tel:5145551234" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center">
+                    <a href="tel:+9779861046510" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center tap-target">
                         <i class="fas fa-phone mr-2"></i> Call Now
                     </a>
                 </div>
@@ -176,66 +202,61 @@
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-secondary">Our Auto Engineering Services</h2>
                 <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
                 <p class="text-lg text-dark max-w-3xl mx-auto">
-                    We offer a comprehensive range of Auto Engineering  services to meet all your private and commercial vechicle needs.
+                    We offer a comprehensive range of Auto Engineering services to meet all your private and commercial vehicle needs.
                 </p>
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Service 1 -->
-                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                <a href="engine-tuning.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
                     <div class="h-48 bg-primary flex items-center justify-center text-6xl text-orange-400">
                         <i class="fas fa-bus"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-secondary">Engine Performance Tuning</h3>
                         <p class="text-dark mb-4">
-Unlock your engine’s full potential with our expert tuning services. We analyze and optimize engine control parameters to improve power
-
+                            Unlock your engine's full potential with our expert tuning services. We analyze and optimize engine control parameters to improve power.
                         </p>
-                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                        <span class="text-accent font-semibold hover:underline transition">
                             Learn More <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                        </span>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Service 2 -->
-                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                <a href="engine-diagnostics.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
                     <div class="h-48 bg-primary flex items-center justify-center text-6xl text-orange-500">
                         <i class="fas fa-car"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-secondary">Engine Diagnostics & Repair
-</h3>
+                        <h3 class="text-xl font-bold mb-3 text-secondary">Engine Diagnostics & Repair</h3>
                         <p class="text-dark mb-4">
-                            Advanced scanning and expert repairs to optimize performance.           
-                                         </p>
-                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                            Advanced scanning and expert repairs to optimize performance.
+                        </p>
+                        <span class="text-accent font-semibold hover:underline transition">
                             Learn More <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                        </span>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Service 3 -->
-                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                <a href="transmission-services.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
                     <div class="h-48 bg-primary flex items-center justify-center text-6xl text-red-600">
                         <i class="fas fa-truck"></i>
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-secondary">Transmission Services
-</h3>
+                        <h3 class="text-xl font-bold mb-3 text-secondary">Transmission Services</h3>
                         <p class="text-dark mb-4">
                             Comprehensive inspection, repair, or replacement of transmission systems.
-
-
                         </p>
-                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                        <span class="text-accent font-semibold hover:underline transition">
                             Learn More <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                        </span>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Service 4 -->
-                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                <a href="emergency-services.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
                     <div class="h-48 bg-primary flex items-center justify-center text-6xl text-green-300">
                         <i class="fas fa-tools"></i>
                     </div>
@@ -244,47 +265,47 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                         <p class="text-dark mb-4">
                             24/7 emergency Auto Engineering services for when needed - we're always available.
                         </p>
-                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                        <span class="text-accent font-semibold hover:underline transition">
                             Learn More <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                        </span>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Service 5 -->
-                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                <a href="engine-repair.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
                     <div class="h-48 bg-primary flex items-center justify-center text-6xl text-green-400">
                         <i class="fas fa-motorcycle"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-secondary">Engine Repair & Replacement</h3>
                         <p class="text-dark mb-4">
-                            abcdefghijklmnopqrstuvwxys.
+                            Professional engine repair and complete replacement services using quality parts.
                         </p>
-                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                        <span class="text-accent font-semibold hover:underline transition">
                             Learn More <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                        </span>
                     </div>
-                </div>
+                </a>
                 
                 <!-- Service 6 -->
-                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                <a href="gearbox-repair.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
                     <div class="h-48 bg-primary flex items-center justify-center text-6xl text-green-600">
-                        <i class="fas fa-bath"></i>
+                        <i class="fas fa-cogs"></i>
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3 text-secondary">Gearbox Repairing</h3>
                         <p class="text-dark mb-4">
-                            abcdefghijklmnopqrstuvwxys.
+                            Expert gearbox repairs and maintenance to keep your vehicle running smoothly.
                         </p>
-                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                        <span class="text-accent font-semibold hover:underline transition">
                             Learn More <i class="fas fa-arrow-right ml-1"></i>
-                        </a>
+                        </span>
                     </div>
-                </div>
+                </a>
             </div>
             
             <div class="text-center mt-12">
-                <a href="#contact" class="bg-accent hover:bg-orange-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition inline-flex items-center">
+                <a href="#contact" class="bg-accent hover:bg-orange-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition inline-flex items-center tap-target">
                     <i class="fas fa-envelope mr-2"></i> Get a Custom Quote for Your Project
                 </a>
             </div>
@@ -292,17 +313,17 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-16 bg-gray-50 mt-20 md:mt-0">
+    <section id="about" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <div class="flex flex-col lg:flex-row items-center gap-12">
                 <div class="lg:w-1/2">
                     <div class="relative h-96 w-full rounded-lg overflow-hidden shadow-lg">
                         <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-                             alt="Plumber at work" 
+                             alt="Auto mechanic at work" 
                              class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
                             <div class="text-white">
-                                <h3 class="text-xl font-bold">20+ Years Experience</h3>
+                                <h3 class="text-xl font-bold">5+ Years Experience</h3>
                                 <p>Serving modern and clean auto servicing services since 2020</p>
                             </div>
                         </div>
@@ -310,9 +331,9 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                 </div>
                 
                 <div class="lg:w-1/2">
-                    <h2 class="text-2xl md:text-2xl text-orange-500 font-bold mb-3">About Pokhara Narayani Auto Engineering</h2>
-                    <p class="text-lg text-red mb-6">
-                        Founded in 2020, Pokhara Narayani Auto Engineering has been providing exceptional auto engineering services to private and businesses throughout Pokhara and surrounding areas. Our team of licensed and insured technicians are dedicated to delivering the highest quality workmanship and customer service.
+                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-secondary">About Pokhara Narayani Auto Engineering</h2>
+                    <p class="text-lg text-dark mb-6">
+                        Founded in 2020, Pokhara Narayani Auto Engineering has been providing exceptional auto engineering services to private customers and businesses throughout Pokhara and surrounding areas. Our team of licensed and insured technicians are dedicated to delivering the highest quality workmanship and customer service.
                     </p>
                     
                     <div class="space-y-4 mb-8">
@@ -322,7 +343,7 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                             </div>
                             <div>
                                 <h4 class="text-lg font-semibold text-secondary">Licensed & Insured</h4>
-                                <p class="text-dark">All our technicians are fully licensed and insured for your vechicle engine protection.</p>
+                                <p class="text-dark">All our technicians are fully licensed and insured for your vehicle engine protection.</p>
                             </div>
                         </div>
                         
@@ -347,7 +368,7 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                         </div>
                     </div>
                     
-                    <a href="#contact" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition inline-flex items-center">
+                    <a href="#contact" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition inline-flex items-center tap-target">
                         <i class="fas fa-phone-alt mr-2"></i> Contact Us Today
                     </a>
                 </div>
@@ -362,7 +383,7 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                 <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Pokhara Narayani Auto Engineering</h2>
                 <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
                 <p class="text-lg max-w-3xl mx-auto">
-                    We go above and beyond to ensure your complete satisfaction with every service we provide for your vechicle engine.
+                    We go above and beyond to ensure your complete satisfaction with every service we provide for your vehicle engine.
                 </p>
             </div>
             
@@ -396,7 +417,7 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                     </div>
                     <h3 class="text-xl font-bold mb-3">Always On Time</h3>
                     <p>
-                        We value your time. Our technicians  arrive promptly at the scheduled time, in uniform and ready to work.
+                        We value your time. Our technicians arrive promptly at the scheduled time, in uniform and ready to work.
                     </p>
                 </div>
                 
@@ -443,7 +464,7 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                 <h2 class="text-3xl md:text-4xl font-bold mb-4 text-secondary">What Our Customers Say</h2>
                 <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
                 <p class="text-lg text-dark max-w-3xl mx-auto">
-                    Don't just take our word for it - hear from our satisfied customers throughout Montreal.
+                    Don't just take our word for it - hear from our satisfied customers throughout Pokhara.
                 </p>
             </div>
             
@@ -460,15 +481,15 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                         </div>
                     </div>
                     <p class="text-dark italic mb-6">
-                        "I had a major pick-up issue on my bus on a Sunday night. Pokhara Narayani Auto Engineering responded within 30 minutes and had the situation under control quickly. Their technician ware professional, knowledgeable, and cleaned up engine everything when finished. Highly recommend!"
+                        "I had a major pickup issue on my bus on a Sunday night. Pokhara Narayani Auto Engineering responded within 30 minutes and had the situation under control quickly. Their technicians were professional, knowledgeable, and cleaned up everything when finished. Highly recommend!"
                     </p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jean Tremblay" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ramraja Bastakoti" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-semibold text-secondary">Ramraja Bastakoti</h4>
-                            <p class="text-sm text-gray-600">Pokhara-26,</p>
+                            <p class="text-sm text-gray-600">Pokhara-26</p>
                         </div>
                     </div>
                 </div>
@@ -485,11 +506,11 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                         </div>
                     </div>
                     <p class="text-dark italic mb-6">
-                        "From the initial call to the final invoice, the service was exceptional. They installed a new oil pump  into my bus engine and took the time to explain all my options. The price was fair and the work was completed on schedule. Will definitely use them again."
+                        "From the initial call to the final invoice, the service was exceptional. They installed a new oil pump into my bus engine and took the time to explain all my options. The price was fair and the work was completed on schedule. Will definitely use them again."
                     </p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Marie Dubois" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Bishnu Yadav" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-semibold text-secondary">Bishnu Yadav</h4>
@@ -510,22 +531,22 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                         </div>
                     </div>
                     <p class="text-dark italic mb-6">
-                        "As a automobile manager, I've worked with many technicians and companies over the years. Pokhara Narayani Auto Engineering stands out for their reliability, professionalism and fair pricing. They've handled everything from emergency leaks of engine oil to complete engine repiping for my jeep."
+                        "As an automobile manager, I've worked with many technicians and companies over the years. Pokhara Narayani Auto Engineering stands out for their reliability, professionalism and fair pricing. They've handled everything from emergency leaks of engine oil to complete engine repiping for my jeep."
                     </p>
                     <div class="flex items-center">
                         <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="David Chen" class="w-full h-full object-cover">
+                            <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Mahesh Shrestha" class="w-full h-full object-cover">
                         </div>
                         <div>
                             <h4 class="font-semibold text-secondary">Mahesh Shrestha</h4>
-                            <p class="text-sm text-gray-600">Nepal auto, Pokhara</p>
+                            <p class="text-sm text-gray-600">Nepal Auto, Pokhara</p>
                         </div>
                     </div>
                 </div>
             </div>
             
             <div class="text-center mt-12">
-                <a href="#" class="text-accent font-semibold hover:underline transition inline-flex items-center">
+                <a href="https://www.google.com/search?q=Pokhara+Narayani+Auto+Engineering+reviews" target="_blank" rel="noopener noreferrer" class="text-accent font-semibold hover:underline transition inline-flex items-center tap-target">
                     Read more reviews on Google <i class="fas fa-external-link-alt ml-2"></i>
                 </a>
             </div>
@@ -546,8 +567,8 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                     </div>
                 </div>
                 <div>
-                    <a href="tel:5145551234" class="bg-white hover:bg-gray-100 text-accent px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center">
-                        <i class="fas fa-phone mr-2"></i> Call Now: +977 9861045610
+                    <a href="tel:+9779861046510" class="bg-white hover:bg-gray-100 text-accent px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center tap-target">
+                        <i class="fas fa-phone mr-2"></i> Call Now: +977 9861046510
                     </a>
                 </div>
             </div>
@@ -593,10 +614,10 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                                 <option value="">Select a service...</option>
                                 <option value="emergency">Emergency Engine Repair</option>
                                 <option value="drain">Head Cleaning</option>
-                                <option value="water-heater">gearbox Service</option>
-                                <option value="toilet">clutch plate Installation</option>
-                                <option value="pipe">engine Repair/Replacement</option>
-                                <option value="bathroom">oil-pump repair</option>
+                                <option value="water-heater">Gearbox Service</option>
+                                <option value="toilet">Clutch Plate Installation</option>
+                                <option value="pipe">Engine Repair/Replacement</option>
+                                <option value="bathroom">Oil-pump repair</option>
                                 <option value="other">Other Service</option>
                             </select>
                         </div>
@@ -607,7 +628,7 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
                         </div>
                         
-                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition">
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition tap-target">
                             Send Message
                         </button>
                     </form>
@@ -635,8 +656,8 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                                     </div>
                                     <div>
                                         <h4 class="font-semibold text-dark">Phone</h4>
-                                        <p class="text-gray-600">+977 9861045610 (24/7 Emergency Line)</p>
-                                        <p class="text-gray-600">+977 9861045610(Business Hours)</p>
+                                        <p class="text-gray-600">+977 9861046510 (24/7 Emergency Line)</p>
+                                        <p class="text-gray-600">+977 9861046510 (Business Hours)</p>
                                     </div>
                                 </div>
                                 
@@ -701,19 +722,19 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                 <div>
                     <h3 class="text-xl font-bold mb-4">Pokhara And Narayani Auto Engineering</h3>
                     <p class="mb-4">
-                        Your trusted Engineering experts serving Pokhara and surrounding areas for over 5 years.
+                        Your trusted auto engineering experts serving Pokhara and surrounding areas for over 5 years.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="#" class="text-white hover:text-accent transition">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition tap-target">
                             <i class="fab fa-facebook-f text-xl"></i>
                         </a>
-                        <a href="#" class="text-white hover:text-accent transition">
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition tap-target">
                             <i class="fab fa-twitter text-xl"></i>
                         </a>
-                        <a href="#" class="text-white hover:text-accent transition">
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition tap-target">
                             <i class="fab fa-instagram text-xl"></i>
                         </a>
-                        <a href="#" class="text-white hover:text-accent transition">
+                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition tap-target">
                             <i class="fab fa-linkedin-in text-xl"></i>
                         </a>
                     </div>
@@ -722,22 +743,22 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                 <div>
                     <h3 class="text-xl font-bold mb-4">Quick Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-accent transition">Home</a></li>
-                        <li><a href="#services" class="hover:text-accent transition">Services</a></li>
-                        <li><a href="#about" class="hover:text-accent transition">About Us</a></li>
-                        <li><a href="#testimonials" class="hover:text-accent transition">Testimonials</a></li>
-                        <li><a href="#contact" class="hover:text-accent transition">Contact</a></li>
+                        <li><a href="#" class="hover:text-accent transition tap-target">Home</a></li>
+                        <li><a href="#services" class="hover:text-accent transition tap-target">Services</a></li>
+                        <li><a href="#about" class="hover:text-accent transition tap-target">About Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-accent transition tap-target">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-accent transition tap-target">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div>
                     <h3 class="text-xl font-bold mb-4">Services</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-accent transition">Emergency Engine Repair</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Head Cleaning</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Oil pump Service</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Power Stearing Repair</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Gear box repairing</a></li>
+                        <li><a href="emergency-services.html" class="hover:text-accent transition tap-target">Emergency Engine Repair</a></li>
+                        <li><a href="head-cleaning.html" class="hover:text-accent transition tap-target">Head Cleaning</a></li>
+                        <li><a href="oil-pump-service.html" class="hover:text-accent transition tap-target">Oil pump Service</a></li>
+                        <li><a href="power-steering.html" class="hover:text-accent transition tap-target">Power Steering Repair</a></li>
+                        <li><a href="gearbox-repair.html" class="hover:text-accent transition tap-target">Gear box repairing</a></li>
                     </ul>
                 </div>
                 
@@ -747,10 +768,10 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
                         <p class="mb-2">Khasibazar-14, Pokhara</p>
                         <p class="mb-2">500 mtrs from Pokhara Airport</p>
                         <p class="mb-4">
-                            <a href="tel:5145551234" class="hover:text-accent transition">+977 9861045610</a>
+                            <a href="tel:+9779861046510" class="hover:text-accent transition tap-target">+977 9861046510</a>
                         </p>
                         <p>
-                            <a href="mailto:info@montrealplumbingpros.com" class="hover:text-accent transition">info@pokharaauto.com.np</a>
+                            <a href="mailto:info@pokharaauto.com.np" class="hover:text-accent transition tap-target">info@pokharaauto.com.np</a>
                         </p>
                     </address>
                 </div>
@@ -759,19 +780,19 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
             <div class="border-t border-gray-700 mt-12 pt-8 text-center">
                 <p>&copy; <span id="currentYear"></span> Pokhara And Narayani Auto Engineering. All Rights Reserved.</p>
                 <div class="mt-4 text-sm">
-                    <a href="#" class="hover:text-accent transition mr-4">Privacy Policy</a>
-                    <a href="#" class="hover:text-accent transition mr-4">Terms of Service</a>
-                    <a href="#" class="hover:text-accent transition">Sitemap</a>
+                    <a href="privacy-policy.html" class="hover:text-accent transition mr-4 tap-target">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="hover:text-accent transition mr-4 tap-target">Terms of Service</a>
+                    <a href="sitemap.html" class="hover:text-accent transition tap-target">Sitemap</a>
                 </div>
-            </div>
-                    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-300">Developed by <a href="https://ptcnepal.com.np" class="text-primary hover:underline">PTC Nepal</a></p>
+                        <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-300">Developed by <a href="https://ptcnepal.com" class="text-primary hover:underline">PTC Nepal</a></p>
 
+            </div>
         </div>
     </footer>
 
     <!-- Floating CTA -->
     <div id="floating-cta" class="fixed bottom-6 right-6 z-50">
-        <a href="tel:+977 9861045610" class="bg-primary hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition flex items-center justify-center animate-bounce">
+        <a href="tel:+9779861046510" class="bg-primary hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition flex items-center justify-center animate-bounce tap-target" aria-label="Call Now">
             <i class="fas fa-phone text-xl"></i>
         </a>
     </div>
@@ -782,14 +803,25 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
         const mobileMenu = document.getElementById('mobile-menu');
         
         menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('open');
+            // Change icon based on menu state
+            const icon = menuToggle.querySelector('i');
+            if (mobileMenu.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
         });
         
         // Close mobile menu when clicking a link
         const mobileLinks = mobileMenu.querySelectorAll('a');
         mobileLinks.forEach(link => {
             link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('open');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+                menuToggle.querySelector('i').classList.add('fa-bars');
             });
         });
         
@@ -848,5 +880,13 @@ Unlock your engine’s full potential with our expert tuning services. We analyz
             setInterval(pulse, 15000);
             pulse(); // Initial pulse
         }
-    </body>
+        
+        // Prevent zoom on input focus on mobile devices
+        document.addEventListener('DOMContentLoaded', function() {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
+            }
+        });
+    </script>
+</body>
 </html>
