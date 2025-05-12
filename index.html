@@ -3,56 +3,884 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Under Development</title>
+    <title>PTC Nepal | Complete website development service from Pokhara</title>
+    <meta name="description" content="Professional web and app development services in Pokhara. We offer website development, mobile apps, domain registration, hosting, and digital solutions for your business.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066cc',
+                        secondary: '#003366',
+                        accent: '#ff6600',
+                        light: '#f8f9fa',
+                        dark: '#212529',
+                    },
+                    fontFamily: {
+                        sans: ['Roboto', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+        /* Custom CSS */
+        .hero-section {
+            position: relative;
             height: 100vh;
-            background-color: #f5f5f5;
-            color: #333;
+            min-height: 600px;
+            overflow: hidden;
         }
-        .container {
-            max-width: 600px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
         }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            z-index: 1;
         }
-        p {
-            font-size: 18px;
-            margin-bottom: 30px;
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            padding-top: 80px;
         }
-        a {
-            color: #3498db;
-            text-decoration: none;
-            font-weight: bold;
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
-        a:hover {
-            text-decoration: underline;
+        
+        .testimonial-card {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
         }
-        .construction-icon {
-            font-size: 50px;
-            margin-bottom: 20px;
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #ff6600;
+            transition: width 0.3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Animation for hero text */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        /* Mobile menu animation */
+        .mobile-menu {
+            transition: all 0.3s ease;
+            max-height: 0;
+            overflow: hidden;
+        }
+        
+        .mobile-menu.open {
+            max-height: 500px;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                height: auto;
+                min-height: 80vh;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+                line-height: 1.2;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .service-card, .testimonial-card {
+                margin-bottom: 1.5rem;
+            }
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <div class="construction-icon">🚧</div>
-        <h1>Website Under Development</h1>
-        <p>We're working hard to bring you an amazing experience. Please check back soon!</p>
-        <p>For more details, click <a href="https://ramrajabastakoti.com.np" target="_blank">here</a>.</p>
+<body class="font-sans bg-light">
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="mr-3 text-primary text-3xl">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <a href="#" class="text-3xl font-bold text-primary">
+                    <span class="text-accent">PTC </span> Nepal
+                </a>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#" class="nav-link text-dark hover:text-accent transition">Home</a>
+                <a href="#services" class="nav-link text-dark hover:text-accent transition">Services</a>
+                <a href="#about" class="nav-link text-dark hover:text-accent transition">About</a>
+                <a href="#testimonials" class="nav-link text-dark hover:text-accent transition">Testimonials</a>
+                <a href="#contact" class="nav-link text-dark hover:text-accent transition">Contact</a>
+                <a href="tel:5145551234" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition flex items-center">
+                    <i class="fas fa-phone mr-2"></i> +977 9861046510
+                </a>
+            </div>
+            
+            <button id="menu-toggle" class="md:hidden text-2xl text-dark">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full z-50 mt-12">
+            <div class="container mx-auto px-4 py-3 flex flex-col">
+                <a href="#" class="py-2 text-dark hover:text-accent">Home</a>
+                <a href="#services" class="py-2 text-dark hover:text-accent">Services</a>
+                <a href="#about" class="py-2 text-dark hover:text-accent">About</a>
+                <a href="#testimonials" class="py-2 text-dark hover:text-accent">Testimonials</a>
+                <a href="#contact" class="py-2 text-dark hover:text-accent">Contact</a>
+                <a href="tel:5145551234" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-orange-700 transition my-2 text-center">
+                    <i class="fas fa-phone mr-2"></i> Call Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Video Background -->
+    <section class="hero-section">
+        <video autoplay muted loop class="hero-video">
+            <source src="https://media-hosting.imagekit.io/9031f3fa08a045b2/Engine%20compressor%20check%20%20%20mechanic%20mh.juber%20Inamdar.mp4?Expires=1841403506&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=S~2eWx0~4izZG7dfD1JN7ztPvclwBKFBN6cOp7bacP9RUE-XaB5eGGc5rproRpA8H1ViIDuBvVmHLcTcYljOFlQeaTkIG8tljZgthi6wVR6a2SsMOVydyvNjM-KHnLIzAKsjFRiW5JRI1U~iV8wFILbVze5ghjDwvfdOCIUFpH9aW0mnsVynhktkUWiEmVj1CFfSHuKroLRN5CtfYcKAAkqlxd6stWCvYDT-Rx5riX9hZb3okWvQywm171ZFrCqokkgYNo8sZfBqolNq-rpbmbMpgz4LsQtooSidkw81ol806xZLt4TwivqzUQ2mWiZVtQuzCx5FMTYPUKmeWvkSkA__" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content flex items-center justify-center h-full text-white">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
+                    Professional Auto Engineering Services <span class="text-accent">in Pokhara</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.3s;">
+                    24/7 emergency services, private and commercial Auto Engineering Services solutions you can trust.
+                </p>
+                <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-6 animate-fade-in" style="animation-delay: 0.6s;">
+                    <a href="#contact" class="bg-accent hover:bg-orange-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center">
+                        <i class="fas fa-envelope mr-2"></i> Get a Free Quote
+                    </a>
+                    <a href="tel:5145551234" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center">
+                        <i class="fas fa-phone mr-2"></i> Call Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-secondary">Our Auto Engineering Services</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-dark max-w-3xl mx-auto">
+                    We offer a comprehensive range of Auto Engineering  services to meet all your private and commercial vechicle needs.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-orange-400">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-secondary">Engine Performance Tuning</h3>
+                        <p class="text-dark mb-4">
+Unlock your engine’s full potential with our expert tuning services. We analyze and optimize engine control parameters to improve power
+
+                        </p>
+                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-orange-500">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-secondary">Engine Diagnostics & Repair
+</h3>
+                        <p class="text-dark mb-4">
+                            Advanced scanning and expert repairs to optimize performance.           
+                                         </p>
+                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-red-600">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-secondary">Transmission Services
+</h3>
+                        <p class="text-dark mb-4">
+                            Comprehensive inspection, repair, or replacement of transmission systems.
+
+
+                        </p>
+                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-green-300">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-secondary">Emergency Services</h3>
+                        <p class="text-dark mb-4">
+                            24/7 emergency Auto Engineering services for when needed - we're always available.
+                        </p>
+                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-green-400">
+                        <i class="fas fa-motorcycle"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-secondary">Engine Repair & Replacement</h3>
+                        <p class="text-dark mb-4">
+                            abcdefghijklmnopqrstuvwxys.
+                        </p>
+                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300">
+                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-green-600">
+                        <i class="fas fa-bath"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 text-secondary">Gearbox Repairing</h3>
+                        <p class="text-dark mb-4">
+                            abcdefghijklmnopqrstuvwxys.
+                        </p>
+                        <a href="#" class="text-accent font-semibold hover:underline transition">
+                            Learn More <i class="fas fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="bg-accent hover:bg-orange-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition inline-flex items-center">
+                    <i class="fas fa-envelope mr-2"></i> Get a Custom Quote for Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50 mt-20 md:mt-0">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative h-96 w-full rounded-lg overflow-hidden shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                             alt="Plumber at work" 
+                             class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="text-xl font-bold">20+ Years Experience</h3>
+                                <p>Serving modern and clean auto servicing services since 2020</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-2xl md:text-2xl text-orange-500 font-bold mb-3">About Pokhara Narayani Auto Engineering</h2>
+                    <p class="text-lg text-red mb-6">
+                        Founded in 2020, Pokhara Narayani Auto Engineering has been providing exceptional auto engineering services to private and businesses throughout Pokhara and surrounding areas. Our team of licensed and insured technicians are dedicated to delivering the highest quality workmanship and customer service.
+                    </p>
+                    
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="text-accent mr-4 mt-1">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-secondary">Licensed & Insured</h4>
+                                <p class="text-dark">All our technicians are fully licensed and insured for your vechicle engine protection.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-accent mr-4 mt-1">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-secondary">24/7 Emergency Service</h4>
+                                <p class="text-dark">Available around the clock for urgent engine issues.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="text-accent mr-4 mt-1">
+                                <i class="fas fa-check-circle text-2xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-secondary">Upfront Pricing</h4>
+                                <p class="text-dark">No hidden fees - we provide transparent pricing before any work begins.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition inline-flex items-center">
+                        <i class="fas fa-phone-alt mr-2"></i> Contact Us Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-primary text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose Pokhara Narayani Auto Engineering</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg max-w-3xl mx-auto">
+                    We go above and beyond to ensure your complete satisfaction with every service we provide for your vechicle engine.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Quality Workmanship</h3>
+                    <p>
+                        We take pride in our work and stand behind every job we complete with our satisfaction guarantee.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Fair Pricing</h3>
+                    <p>
+                        Competitive rates with no hidden fees. We provide upfront pricing before starting any work.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Always On Time</h3>
+                    <p>
+                        We value your time. Our technicians  arrive promptly at the scheduled time, in uniform and ready to work.
+                    </p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">24/7 Support</h3>
+                    <p>
+                        Our friendly customer service team is available around the clock to answer your questions.
+                    </p>
+                </div>
+                
+                <!-- Feature 5 -->
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Modern Equipment</h3>
+                    <p>
+                        We use state-of-the-art tools, machine and technology to diagnose and solve engine issues efficiently.
+                    </p>
+                </div>
+                
+                <!-- Feature 6 -->
+                <div class="text-center p-6">
+                    <div class="text-5xl mb-4">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">5-Star Service</h3>
+                    <p>
+                        Our many satisfied customers consistently rate us 5 stars for our professionalism and expertise.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-secondary">What Our Customers Say</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-dark max-w-3xl mx-auto">
+                    Don't just take our word for it - hear from our satisfied customers throughout Montreal.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-dark italic mb-6">
+                        "I had a major pick-up issue on my bus on a Sunday night. Pokhara Narayani Auto Engineering responded within 30 minutes and had the situation under control quickly. Their technician ware professional, knowledgeable, and cleaned up engine everything when finished. Highly recommend!"
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Jean Tremblay" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-secondary">Ramraja Bastakoti</h4>
+                            <p class="text-sm text-gray-600">Pokhara-26,</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-dark italic mb-6">
+                        "From the initial call to the final invoice, the service was exceptional. They installed a new oil pump  into my bus engine and took the time to explain all my options. The price was fair and the work was completed on schedule. Will definitely use them again."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Marie Dubois" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-secondary">Bishnu Yadav</h4>
+                            <p class="text-sm text-gray-600">Birgunj</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card bg-gray-50 p-6 rounded-lg transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 text-xl mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-dark italic mb-6">
+                        "As a automobile manager, I've worked with many technicians and companies over the years. Pokhara Narayani Auto Engineering stands out for their reliability, professionalism and fair pricing. They've handled everything from emergency leaks of engine oil to complete engine repiping for my jeep."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                            <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="David Chen" class="w-full h-full object-cover">
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-secondary">Mahesh Shrestha</h4>
+                            <p class="text-sm text-gray-600">Nepal auto, Pokhara</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="text-accent font-semibold hover:underline transition inline-flex items-center">
+                    Read more reviews on Google <i class="fas fa-external-link-alt ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Banner -->
+    <section class="bg-accent text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="text-3xl mr-4">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold">Auto Engineering Emergency?</h3>
+                        <p>We're available 24/7 for emergency calls</p>
+                    </div>
+                </div>
+                <div>
+                    <a href="tel:5145551234" class="bg-white hover:bg-gray-100 text-accent px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center">
+                        <i class="fas fa-phone mr-2"></i> Call Now: +977 9861045610
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-secondary">Contact Us</h2>
+                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
+                <p class="text-lg text-dark max-w-3xl mx-auto">
+                    Have questions or need service? Fill out the form below or give us a call. We'll respond promptly.
+                </p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <form id="contactForm" class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="mb-6">
+                            <label for="name" class="block text-dark font-medium mb-2">Your Name*</label>
+                            <input type="text" id="name" name="name" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-dark font-medium mb-2">Email*</label>
+                            <input type="email" id="email" name="email" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="phone" class="block text-dark font-medium mb-2">Phone Number*</label>
+                            <input type="tel" id="phone" name="phone" required 
+                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-dark font-medium mb-2">Service Needed</label>
+                            <select id="service" name="service" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                                <option value="">Select a service...</option>
+                                <option value="emergency">Emergency Engine Repair</option>
+                                <option value="drain">Head Cleaning</option>
+                                <option value="water-heater">gearbox Service</option>
+                                <option value="toilet">clutch plate Installation</option>
+                                <option value="pipe">engine Repair/Replacement</option>
+                                <option value="bathroom">oil-pump repair</option>
+                                <option value="other">Other Service</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-dark font-medium mb-2">Message*</label>
+                            <textarea id="message" name="message" rows="4" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="h-full flex flex-col justify-between">
+                        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
+                            <h3 class="text-xl font-bold mb-4 text-secondary">Our Information</h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <div class="text-primary text-xl mr-4">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-dark">Office Address</h4>
+                                        <p class="text-gray-600">Pokhara-14, Chauthe, Nepal</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-primary text-xl mr-4">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-dark">Phone</h4>
+                                        <p class="text-gray-600">+977 9861045610 (24/7 Emergency Line)</p>
+                                        <p class="text-gray-600">+977 9861045610(Business Hours)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-primary text-xl mr-4">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-dark">Email</h4>
+                                        <p class="text-gray-600">info@pokharaauto.com.np</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start">
+                                    <div class="text-primary text-xl mr-4">
+                                        <i class="fas fa-clock"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-dark">Hours</h4>
+                                        <p class="text-gray-600">Office: Monday-Friday, 7am-7pm</p>
+                                        <p class="text-gray-600">Emergency Services: 24/7</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white p-8 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold mb-4 text-secondary">Service Area</h3>
+                            <p class="mb-4 text-dark">We proudly serve all of Pokhara and surrounding areas including:</p>
+                            
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <ul class="space-y-2 text-gray-600">
+                                        <li><i class="fas fa-check-circle text-accent mr-2"></i> Pokhara</li>
+                                        <li><i class="fas fa-check-circle text-accent mr-2"></i> Baglung</li>
+                                        <li><i class="fas fa-check-circle text-accent mr-2"></i> Waling</li>
+                                        <li><i class="fas fa-check-circle text-accent mr-2"></i> Dumre</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <ul class="space-y-2 text-gray-600">
+                                        <li><i class="fas fa-check-circle text-accent mr-2"></i> Chitwan</li>
+                                        <li><i class="fas fa-check-circle text-accent mr-2"></i> Butwal</li>
+                                        <li><i class="fas fa-check-circle text-accent mr-2"></i> Birgunj</li>
+                                        <li><i class="fas fa-check-circle text-accent mr-2"></i> Gorkha</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <p class="mt-4 text-dark">Call to inquire about service to your specific area.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Pokhara And Narayani Auto Engineering</h3>
+                    <p class="mb-4">
+                        Your trusted Engineering experts serving Pokhara and surrounding areas for over 5 years.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-white hover:text-accent transition">
+                            <i class="fab fa-facebook-f text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition">
+                            <i class="fab fa-instagram text-xl"></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-accent transition">
+                            <i class="fab fa-linkedin-in text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent transition">Home</a></li>
+                        <li><a href="#services" class="hover:text-accent transition">Services</a></li>
+                        <li><a href="#about" class="hover:text-accent transition">About Us</a></li>
+                        <li><a href="#testimonials" class="hover:text-accent transition">Testimonials</a></li>
+                        <li><a href="#contact" class="hover:text-accent transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-accent transition">Emergency Engine Repair</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Head Cleaning</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Oil pump Service</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Power Stearing Repair</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Gear box repairing</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <address class="not-italic">
+                        <p class="mb-2">Khasibazar-14, Pokhara</p>
+                        <p class="mb-2">500 mtrs from Pokhara Airport</p>
+                        <p class="mb-4">
+                            <a href="tel:5145551234" class="hover:text-accent transition">+977 9861045610</a>
+                        </p>
+                        <p>
+                            <a href="mailto:info@montrealplumbingpros.com" class="hover:text-accent transition">info@pokharaauto.com.np</a>
+                        </p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p>&copy; <span id="currentYear"></span> Pokhara And Narayani Auto Engineering. All Rights Reserved.</p>
+                <div class="mt-4 text-sm">
+                    <a href="#" class="hover:text-accent transition mr-4">Privacy Policy</a>
+                    <a href="#" class="hover:text-accent transition mr-4">Terms of Service</a>
+                    <a href="#" class="hover:text-accent transition">Sitemap</a>
+                </div>
+            </div>
+                    <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-300">Developed by <a href="https://ptcnepal.com.np" class="text-primary hover:underline">PTC Nepal</a></p>
+
+        </div>
+    </footer>
+
+    <!-- Floating CTA -->
+    <div id="floating-cta" class="fixed bottom-6 right-6 z-50">
+        <a href="tel:+977 9861045610" class="bg-primary hover:bg-blue-700 text-white rounded-full p-4 shadow-lg transition flex items-center justify-center animate-bounce">
+            <i class="fas fa-phone text-xl"></i>
+        </a>
     </div>
-</body>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Smooth scrolling for anchor links with offset for fixed header
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const headerHeight = document.querySelector('header').offsetHeight;
+                    window.scrollTo({
+                        top: targetElement.offsetTop - headerHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Here you would typically send the form data to your server
+                // For demonstration, we'll just show an alert
+                alert('Thank you for your message! We will contact you shortly.');
+                this.reset();
+            });
+        }
+        
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Animate floating CTA
+        const floatingCta = document.getElementById('floating-cta');
+        if (floatingCta) {
+            let isPulsing = false;
+            
+            function pulse() {
+                if (!isPulsing) {
+                    isPulsing = true;
+                    floatingCta.classList.add('animate-pulse');
+                    setTimeout(() => {
+                        floatingCta.classList.remove('animate-pulse');
+                        isPulsing = false;
+                    }, 2000);
+                }
+            }
+            
+            // Pulse every 15 seconds
+            setInterval(pulse, 15000);
+            pulse(); // Initial pulse
+        }
+    </body>
 </html>
