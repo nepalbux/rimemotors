@@ -1,895 +1,1136 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PTC Nepal | Complete web development Service from Pokhara</title>
-    <link rel="icon" href="https://media-hosting.imagekit.io/d6cdfe076f0a4de9/favicon.ico?Expires=1839342735&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=qikqGNJGlgOlcp5kSYmKnpohzxAaxrF7G5bXFumHDTy89K3fJPIVIF1aYG-Ko1repcnQl66EQzPE3GjYR3pNANiyNuDXedLGeLwYvBO11kG2Dda-nvjgbtBh2Qzys37BVlVXvpbBaDyATlWVWiwuAKvYm9VjSlKG6MQf0IlLfAGiWkC~un2UDpDhPe9VqPOXVqDlb9Fpc6J9gWiAhdpcJNgTKnVwJ5L~JrlH6Id~cK98TcOVlGngfNMOpsBz-DMp76hcKJ7jQZvxXzjuDWA16PJrqsMDtei82nQL8QEvNf9mfd0KyN7OsjHUUi7AE4r5jLUbY5c2DDYIo-8jabxH3w__" type="image/x-icon">
-    <meta name="description" content="Trusted web development services in Pokhara offering  website and mobile app development services. Call us anytime!">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0066cc',
-                        secondary: '#003366',
-                        accent: '#ff6600',
-                        light: '#f8f9fa',
-                        dark: '#212529',
-                    },
-                    fontFamily: {
-                        sans: ['Roboto', 'sans-serif'],
-                        heading: ['Montserrat', 'sans-serif'],
-                    },
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Custom CSS */
-        .hero-section {
-            position: relative;
-            height: 100vh;
-            min-height: 600px;
-            overflow: hidden;
-        }
-        
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.1);
-            z-index: 1;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            padding-top: 80px;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .testimonial-card {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .nav-link::after {
-            content: '';
-            display: block;
-            width: 0;
-            height: 2px;
-            background: #ff6600;
-            transition: width 0.3s;
-        }
-        
-        .nav-link:hover::after {
-            width: 100%;
-        }
-        
-        /* Animation for hero text */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .animate-fade-in {
-            animation: fadeIn 1s ease-out forwards;
-        }
-        
-        /* Mobile menu animation */
-        .mobile-menu {
-            transition: all 0.3s ease;
-            max-height: 0;
-            overflow: hidden;
-        }
-        
-        .mobile-menu.open {
-            max-height: 500px;
-        }
-        
-        /* Tap target sizing for mobile */
-        .tap-target {
-            min-height: 48px;
-            min-width: 48px;
-        }
-        
-        /* Prevent zoom on input focus */
-        @media screen and (max-width: 767px) {
-            input, select, textarea {
-                font-size: 16px !important;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fewa Cargo Services - Quality Cargo Services in Nepal</title>
+<link rel="icon" href="https://media-hosting.imagekit.io/d6cdfe076f0a4de9/favicon.ico?Expires=1839342735&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=qikqGNJGlgOlcp5kSYmKnpohzxAaxrF7G5bXFumHDTy89K3fJPIVIF1aYG-Ko1repcnQl66EQzPE3GjYR3pNANiyNuDXedLGeLwYvBO11kG2Dda-nvjgbtBh2Qzys37BVlVXvpbBaDyATlWVWiwuAKvYm9VjSlKG6MQf0IlLfAGiWkC~un2UDpDhPe9VqPOXVqDlb9Fpc6J9gWiAhdpcJNgTKnVwJ5L~JrlH6Id~cK98TcOVlGngfNMOpsBz-DMp76hcKJ7jQZvxXzjuDWA16PJrqsMDtei82nQL8QEvNf9mfd0KyN7OsjHUUi7AE4r5jLUbY5c2DDYIo-8jabxH3w__" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#8E6FF7',secondary:'#1A237E'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.perspective-1000 {
+  perspective: 1000px;
+}
+.rotate-y-12 {
+  transform: rotateY(12deg);
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.hover\:float:hover {
+  animation: float 2s ease-in-out infinite;
+}
+body {
+font-family: 'Poppins', sans-serif;
+}
+.appointment-form input[type="date"]::-webkit-calendar-picker-indicator {
+filter: invert(0.5);
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+padding-left: 2rem;
+cursor: pointer;
+user-select: none;
+}
+.custom-checkbox input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+height: 0;
+width: 0;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+height: 1.25rem;
+width: 1.25rem;
+background-color: #fff;
+border: 2px solid #e2e8f0;
+border-radius: 4px;
+}
+.custom-checkbox:hover input ~ .checkmark {
+border-color: #cbd5e0;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #8E6FF7;
+border-color: #8E6FF7;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 0.4rem;
+top: 0.2rem;
+width: 0.3rem;
+height: 0.6rem;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.switch {
+position: relative;
+display: inline-block;
+width: 3.5rem;
+height: 1.75rem;
+}
+.switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #e2e8f0;
+transition: .4s;
+border-radius: 34px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 1.25rem;
+width: 1.25rem;
+left: 0.25rem;
+bottom: 0.25rem;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #8E6FF7;
+}
+input:checked + .slider:before {
+transform: translateX(1.75rem);
+}
+.department-scroll::-webkit-scrollbar {
+height: 6px;
+}
+.department-scroll::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 10px;
+}
+.department-scroll::-webkit-scrollbar-thumb {
+background: #d1d5db;
+border-radius: 10px;
+}
+.department-scroll::-webkit-scrollbar-thumb:hover {
+background: #8E6FF7;
+}
+</style>
 </head>
-<body class="font-sans bg-light">
-    <!-- Header -->
-    <header class="bg-white shadow-md fixed w-full z-5">
-        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <div class="mr-3 text-primary text-3xl">
-                    <a href="#" class="flex items-center gap-2 text-2xl font-['architectural'] text-primary" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-                     <img src="https://ik.imagekit.io/70al5xvi0/logo.jpg?updatedAt=1751367294161" alt="Logo" class="w-10  h-10">
-                </div>
-                <a href="#" class="text-2xl md:text-3xl font-bold text-primary">
-                    <span class="text-accent">PTC </span> Nepal
-                </a>
-            </div>
-            
-            <div class="hidden md:flex space-x-6 items-center">
-                <a href="#" class="nav-link text-dark hover:text-accent transition">Home</a>
-                <a href="#services" class="nav-link text-dark hover:text-accent transition">Services</a>
-                <a href="#about" class="nav-link text-dark hover:text-accent transition">About</a>
-                <a href="#testimonials" class="nav-link text-dark hover:text-accent transition">Testimonials</a>
-                <a href="#contact" class="nav-link text-dark hover:text-accent transition">Contact</a>
-                <a href="tel:+9779856020179" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-accent transition flex items-center tap-target">
-                    <i class="fas fa-phone mr-2"></i> +977 9856020179
-                </a>
-            </div>
-            
-            <button id="menu-toggle" class="md:hidden text-2xl text-dark tap-target" aria-label="Toggle menu">
-                <i class="fas fa-bars"></i>
-            </button>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="mobile-menu md:hidden bg-white shadow-lg absolute w-full z-50">
-            <div class="container mx-auto px-4 py-3 flex flex-col">
-                <a href="#" class="py-3 text-dark hover:text-accent border-b border-gray-100 tap-target">Home</a>
-                <a href="#services" class="py-3 text-dark hover:text-accent border-b border-gray-100 tap-target">Services</a>
-                <a href="#about" class="py-3 text-dark hover:text-accent border-b border-gray-100 tap-target">About</a>
-                <a href="#testimonials" class="py-3 text-dark hover:text-accent border-b border-gray-100 tap-target">Testimonials</a>
-                <a href="#contact" class="py-3 text-dark hover:text-accent border-b border-gray-100 tap-target">Contact</a>
-                <a href="tel:+9779856020179" class="bg-accent text-white px-4 py-3 rounded-lg hover:bg-orange-700 transition my-2 text-center tap-target">
-                    <i class="fas fa-phone mr-2"></i> Call Now
-                </a>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section with Video Background -->
-    <section class="hero-section">
-        <video autoplay muted loop class="hero-video">
-            <source src="https://ik.imagekit.io/70al5xvi0/Generated%20video%201.mp4?updatedAt=1748008420580" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content flex items-center justify-center h-full text-white">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-in">
-                    <span class="text-accent"> Professional</span> website development Services from <span class="text-accent"> Pokhara</span>
-                </h1>
-                <p class="text-lg md:text-xl lg:text-2xl mb-8 max-w-2xl mx-auto animate-fade-in" style="animation-delay: 0.3s;">
-                    Building stunning, responsive website and mobile app that grows your brand and connect you with your audience online.
-                </p>
-                <div class="flex flex-col md:flex-row justify-center gap-4 md:gap-6 animate-fade-in" style="animation-delay: 0.6s;">
-                    <a href="#contact" class="bg-accent hover:bg-orange-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center tap-target">
-                        <i class="fas fa-envelope mr-2"></i> Get a Free Quote
-                    </a>
-                    <a href="tel:+9779856020179" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center justify-center tap-target">
-                        <i class="fas fa-phone mr-2"></i> Call Now
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-secondary">Our web development Services</h2>
-                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-                <p class="text-lg text-purple-400 max-w-3xl mx-auto">
-                    We offer a comprehensive range of IT services to meet all your personal and business technology needs.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1 -->
-                <a href="Register-Domain.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
-                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-orange-400">
-                        <i class="fas fa-domain"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-secondary">Domain Registration</h3>
-                        <p class="text-dark mb-4">
-                            Domain registration is the process of purchasing a unique website name (URL) through a domain registrar for online identification and access.
-                        </p>
-                        <span class="text-accent font-semibold hover:underline transition">
-                            Register Domain <i class="fas fa-arrow-right ml-1"></i>
-                        </span>
-                    </div>
-                </a>
-                
-                <!-- Service 2 -->
-                <a href="develop-website.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
-                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-orange-500">
-                        <i class="fas fa-website"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-secondary">Website Development</h3>
-                        <p class="text-dark mb-4">
-                            Website development involves designing, coding, testing, and launching websites, focusing on user experience, responsiveness, performance, SEO, and functionality
-                        </p>
-                        <span class="text-accent font-semibold hover:underline transition">
-                            Develop Your Website <i class="fas fa-arrow-right ml-1"></i>
-                        </span>
-                    </div>
-                </a>
-                
-                <!-- Service 3 -->
-                <a href="Mobile-App.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
-                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-red-600">
-                        <i class="fas fa-mobile"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-secondary">Mobile App Development</h3>
-                        <p class="text-dark mb-4">
-                            Mobile app development involves designing, coding, testing, and deploying applications for Android and iOS, ensuring performance, usability, and responsiveness.
-                        </p>
-                        <span class="text-accent font-semibold hover:underline transition">
-                            Build Your App <i class="fas fa-arrow-right ml-1"></i>
-                        </span>
-                    </div>
-                </a>
-                
-                <!-- Service 4 -->
-                <a href="Hosting-services.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
-                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-green-300">
-                        <i class="fas fa-hosting"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-secondary">Hosting Service</h3>
-                        <p class="text-dark mb-4">
-                            Hosting service provides space on a server to store website files, making them accessible online via the internet for users worldwide.
-                        </p>
-                        <span class="text-accent font-semibold hover:underline transition">
-                            Buy Hosting Package <i class="fas fa-arrow-right ml-1"></i>
-                        </span>
-                    </div>
-                </a>
-                
-                <!-- Service 5 -->
-                <a href="Social-Page-Manage.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
-                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-green-400">
-                        <i class="fas fa-social media"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-secondary">Social Media Management</h3>
-                        <p class="text-dark mb-4">
-                            Social media management involves creating, scheduling, analyzing, and engaging with content on platforms like Facebook, Instagram, and Twitter to grow online presence.
-                        </p>
-                        <span class="text-accent font-semibold hover:underline transition">
-                            Manage Your Social Media <i class="fas fa-arrow-right ml-1"></i>
-                        </span>
-                    </div>
-                </a>
-                
-                <!-- Service 6 -->
-                <a href="Develop-Software.html" class="service-card bg-light rounded-lg overflow-hidden shadow-md transition duration-300 block">
-                    <div class="h-48 bg-primary flex items-center justify-center text-6xl text-green-600">
-                        <i class="fas fa-software"></i>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3 text-secondary">Software Development</h3>
-                        <p class="text-dark mb-4">
-                            Software development is the process of designing, coding, testing, and maintaining applications or systems to meet user or business requirements efficiently.
-                        </p>
-                        <span class="text-accent font-semibold hover:underline transition">
-                            Order For Development <i class="fas fa-arrow-right ml-1"></i>
-                        </span>
-                    </div>
-                </a>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="#contact" class="bg-accent hover:bg-orange-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition inline-flex items-center tap-target">
-                    <i class="fas fa-envelope mr-2"></i> Get a Custom Quote for Your Project
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row items-center gap-12">
-                <div class="lg:w-1/2">
-                    <div class="relative h-96 w-full rounded-lg overflow-hidden shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1605152276897-4f618f831968?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-                             alt="Auto mechanic at work" 
-                             class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-6">
-                            <div class="text-white">
-                                <h3 class="text-xl font-bold">12+ Years Experience</h3>
-                                <p>"Delivering modern and reliable IT solutions since 2012."</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="lg:w-1/2">
-                    <h2 class="text-2xl md:text-3xl font-bold mb-6 text-secondary">About PTC Nepal</h2>
-                    <p class="text-lg text-dark mb-6">
-                        Founded in 2012, PTC Nepal has been delivering exceptional web development services to individuals and businesses across Pokhara and beyond. Our team of skilled and dedicated developers is committed to providing high-quality digital solutions and outstanding customer support.
-                    </p>
-                    
-                    <div class="space-y-4 mb-8">
-                        <div class="flex items-start">
-                            <div class="text-accent mr-4 mt-1">
-                                <i class="fas fa-check-circle text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-secondary">Certified & Experienced</h4>
-                                <p class="text-dark">Our developers are highly skilled and certified to ensure the best quality in every project.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="text-accent mr-4 mt-1">
-                                <i class="fas fa-check-circle text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-secondary">24/7 Transparent Pricing</h4>
-                                <p class="text-dark">No hidden costs – we provide clear and upfront pricing for all our web development services.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="text-accent mr-4 mt-1">
-                                <i class="fas fa-check-circle text-2xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-lg font-semibold text-secondary">24/7 Support</h4>
-                                <p class="text-dark">We offer round-the-clock technical support to keep your website running smoothly at all times.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition inline-flex items-center tap-target">
-                        <i class="fas fa-phone-alt mr-2"></i> Contact Us Today
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Choose Us Section -->
-    <section class="py-16 bg-primary text-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Why Choose PTC Nepal?</h2>
-                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-                <p class="text-lg max-w-3xl mx-auto">
-                    We go above and beyond to ensure your complete satisfaction with every service we provide to support your business through digitization.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="text-center p-6">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-medal"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Quality Workmanship</h3>
-                    <p>
-                        We take pride in our work and stand behind every job we complete with our satisfaction guarantee.
-                    </p>
-                </div>
-                
-                <!-- Feature 2 -->
-                <div class="text-center p-6">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Fair Pricing</h3>
-                    <p>
-                        Competitive rates with no hidden fees. We provide upfront pricing before starting any work.
-                    </p>
-                </div>
-                
-                <!-- Feature 3 -->
-                <div class="text-center p-6">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Always On Time</h3>
-                    <p>
-                        We value your time. Our technicians experts arrive promptly at the scheduled time, to finalize your projects.
-                    </p>
-                </div>
-                
-                <!-- Feature 4 -->
-                <div class="text-center p-6">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">24/7 Support</h3>
-                    <p>
-                        Our friendly customer service team is available around the clock to answer your questions.
-                    </p>
-                </div>
-                
-                <!-- Feature 5 -->
-                <div class="text-center p-6">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Modern Technology</h3>
-                    <p>
-                        We use state-of-the-art technology to diagnose and solve development issues efficiently.
-                    </p>
-                </div>
-                
-                <!-- Feature 6 -->
-                <div class="text-center p-6">
-                    <div class="text-5xl mb-4">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">5-Star Service</h3>
-                    <p>
-                        Our many satisfied customers consistently rate us 5 stars for our professionalism and expertise.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-secondary">What Our Customers Say</h2>
-                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-                <p class="text-lg text-dark max-w-3xl mx-auto">
-                    Don't just take our word for it - hear from our satisfied customers throughout Nepal.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-card bg-gray-50 p-6 rounded-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="text-yellow-400 text-xl mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-dark italic mb-6">
-                        ""I needed urgent help with my website late on a Sunday night. PTC Nepal responded within 30 minutes and quickly resolved the issue. Their team was professional, knowledgeable, and ensured everything was running smoothly before finishing. Highly recommend their services!"
-                    </p>
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ramraja Bastakoti" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-secondary">Dipak Dhungana</h4>
-                            <p class="text-sm text-gray-600">Sathikocafe.com.np</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 2 -->
-                <div class="testimonial-card bg-gray-50 p-6 rounded-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="text-yellow-400 text-xl mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-dark italic mb-6">
-"From the initial consultation to the final deliverable, the service was outstanding. PTC Nepal revamped my website and took the time to explain all the options available. The pricing was fair, and the work was completed on time. I will definitely work with them again."
-                    </p>
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Bishnu Yadav" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-secondary">Mukesh Sahani</h4>
-                            <p class="text-sm text-gray-600">Pokharaauto.com.np</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Testimonial 3 -->
-                <div class="testimonial-card bg-gray-50 p-6 rounded-lg transition duration-300">
-                    <div class="flex items-center mb-4">
-                        <div class="text-yellow-400 text-xl mr-2">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p class="text-dark italic mb-6">
-"As a web development manager, I've worked with many agencies over the years. PTC Nepal stands out for their reliability, professionalism, and fair pricing. They've handled everything from urgent website fixes to complete redesigns for my business."
-
-                    </p>
-                    <div class="flex items-center">
-                        <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
-                            <img src="https://randomuser.me/api/portraits/men/68.jpg" alt="Mahesh Shrestha" class="w-full h-full object-cover">
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-secondary">Ramesh Baral</h4>
-                            <p class="text-sm text-gray-600">apollodentalcare.com.np</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="https://www.google.com/search?q=PTC+Nepal+reviews" target="_blank" rel="noopener noreferrer" class="text-accent font-semibold hover:underline transition inline-flex items-center tap-target">
-                    Read more reviews on Google <i class="fas fa-external-link-alt ml-2"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Emergency Banner -->
-    <section class="bg-accent text-white py-6">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="flex items-center mb-4 md:mb-0">
-                    <div class="text-3xl mr-4">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold">Need Our Service Immedeatly?</h3>
-                        <p>We're available 24/7 for emergency calls</p>
-                    </div>
-                </div>
-                <div>
-                    <a href="tel:+9779856020179" class="bg-white hover:bg-gray-100 text-accent px-6 py-3 rounded-lg text-lg font-semibold transition flex items-center tap-target">
-                        <i class="fas fa-phone mr-2"></i> Call Now: +977 9856020179
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-secondary">Contact Us</h2>
-                <div class="w-20 h-1 bg-accent mx-auto mb-6"></div>
-                <p class="text-lg text-dark max-w-3xl mx-auto">
-                    Have questions or need service? Fill out the form below or give us a call. We'll respond promptly.
-                </p>
-            </div>
-            
-            <div class="flex flex-col lg:flex-row gap-12">
-                <div class="lg:w-1/2">
-                    <form id="contactForm" class="bg-white p-8 rounded-lg shadow-md">
-                        <div class="mb-6">
-                            <label for="name" class="block text-dark font-medium mb-2">Your Name*</label>
-                            <input type="text" id="name" name="name" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="email" class="block text-dark font-medium mb-2">Email*</label>
-                            <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="phone" class="block text-dark font-medium mb-2">Phone Number*</label>
-                            <input type="tel" id="phone" name="phone" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="service" class="block text-dark font-medium mb-2">Service Needed</label>
-                            <select id="service" name="service" 
-                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
-                                <option value="">Select a service...</option>
-                                <option value="emergency">Domain Registration</option>
-                                <option value="drain">Website Development</option>
-                                <option value="water-heater">Mobile App Development</option>
-                                <option value="toilet">Server Setup</option>
-                                <option value="pipe">Redesign for website</option>
-                                <option value="bathroom">SSL Certificate</option>
-                                <option value="other">Social Medai Managent</option>
-                            </select>
-                        </div>
-                        
-                        <div class="mb-6">
-                            <label for="message" class="block text-dark font-medium mb-2">Message*</label>
-                            <textarea id="message" name="message" rows="4" required 
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"></textarea>
-                        </div>
-                        
-                        <button type="submit" class="w-full bg-primary hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold transition tap-target">
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-                
-                <div class="lg:w-1/2">
-                    <div class="h-full flex flex-col justify-between">
-                        <div class="bg-white p-8 rounded-lg shadow-md mb-8">
-                            <h3 class="text-xl font-bold mb-4 text-accent">Our Information</h3>
-                            
-                            <div class="space-y-6">
-                                <div class="flex items-start">
-                                    <div class="text-primary text-xl mr-4">
-                                        <i class="fas fa-map-marker-alt"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-dark">Office Address</h4>
-                                        <p class="text-gray-600">Pokhara-26, Baraldanda, Kaski, Nepal</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="text-primary text-xl mr-4">
-                                        <i class="fas fa-phone-alt"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-dark">Phone</h4>
-                                        <p class="text-gray-600">+977 9856020179 (24/7 Emergency Line)</p>
-                                        <p class="text-gray-600">+977 061 411669 / 779 / 889 (Business Hours)</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="text-primary text-xl mr-4">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-dark">Email</h4>
-                                        <p class="text-gray-600">info@ptcnepal.com.np</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="flex items-start">
-                                    <div class="text-primary text-xl mr-4">
-                                        <i class="fas fa-clock"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="font-semibold text-dark">Hours</h4>
-                                        <p class="text-gray-600">Office: Monday-Friday, 7am-7pm</p>
-                                        <p class="text-gray-600">Emergency Services: 24/7</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="bg-white p-8 rounded-lg shadow-md">
-                            <h3 class="text-xl font-bold mb-4 text-secondary">Service Area</h3>
-                            <p class="mb-4 text-dark">We proudly serve all of Pokhara and surrounding areas including:</p>
-                            
-                            <div class="grid grid-cols-2 gap-4">
-                                <div>
-                                    <ul class="space-y-2 text-gray-600">
-                                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Pokhara</li>
-                                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Baglung</li>
-                                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Waling</li>
-                                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Dumre</li>
-                                    </ul>
-                                </div>
-                                <div>
-                                    <ul class="space-y-2 text-accent-600">
-                                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Chitwan</li>
-                                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Butwal</li>
-                                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Birgunj</li>
-                                        <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Gorkha</li>
-                                    </ul>
-                                </div>
-                            </div>
-                            
-                            <p class="mt-4 text-accent">Call to inquire about service for your specific requirement.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-secondary text-white py-12">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">PTC Nepal Pvt. Ltd.</h3>
-                    <p class="mb-4">
-                        Your trusted IT partner in Pokhara and surroundings areas for over 12 years.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition tap-target">
-                            <i class="fab fa-facebook-f text-xl"></i>
-                        </a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition tap-target">
-                            <i class="fab fa-twitter text-xl"></i>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition tap-target">
-                            <i class="fab fa-instagram text-xl"></i>
-                        </a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-accent transition tap-target">
-                            <i class="fab fa-linkedin-in text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-accent transition tap-target">Home</a></li>
-                        <li><a href="#services" class="hover:text-accent transition tap-target">Services</a></li>
-                        <li><a href="#about" class="hover:text-accent transition tap-target">About Us</a></li>
-                        <li><a href="#testimonials" class="hover:text-accent transition tap-target">Testimonials</a></li>
-                        <li><a href="#contact" class="hover:text-accent transition tap-target">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Services</h3>
-                    <ul class="space-y-2">
-                        <li><a href="domain-registration.html" class="hover:text-accent transition tap-target">Domain Registration</a></li>
-                        <li><a href="website-development.html" class="hover:text-accent transition tap-target">Website Development</a></li>
-                        <li><a href="mobile-app-development.html" class="hover:text-accent transition tap-target">Mobile App Development</a></li>
-                        <li><a href="server-management.html" class="hover:text-accent transition tap-target">Server Management</a></li>
-                        <li><a href="social-media-management" class="hover:text-accent transition tap-target">Social Media Management</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
-                    <address class="not-italic">
-                        <p class="mb-2">Baraldanda-26, Pokhara</p>
-                        <p class="mb-2">1500 mtrs from Budibazar-Chowk</p>
-                        <p class="mb-4">
-                            <a href="tel:+9779856020179" class="hover:text-accent transition tap-target">+977 9856020179</a>
-                        </p>
-                        <p>
-                            <a href="mailto:info@ptcnepal.com.np" class="hover:text-accent transition tap-target">info@ptcnepal.com.np</a>
-                        </p>
-                    </address>
-                </div>
-            </div>
-            
-            <div class="border-t border-gray-700 mt-12 pt-6 text-center">
-                <p>&copy; <span id="currentYear"></span> PTC Nepal Pvt.Ltd. All Rights Reserved.</p>
-                <div class="mt-4 text-sm">
-                    <a href="privacy-policy.html" class="hover:text-accent transition mr-4 tap-target">Privacy Policy</a>
-                    <a href="terms-of-service.html" class="hover:text-accent transition mr-4 tap-target">Terms of Service</a>
-                    <a href="sitemap.html" class="hover:text-accent transition tap-target">Sitemap</a>
-                </div>
-                        <div class="border-t border-gray-600 mt-10 pt-6 text-center text-gray-200">Developed by:  <a href="https://ramrajabastakoti.com.np" class="text-accent hover:underline"> Ramraja</a></p>
-
-            </div>
-        </div>
-    </footer>
-
-    <!-- Floating CTA -->
-    <div id="floating-cta" class="fixed bottom-6 right-6 z-50">
-        <a href="tel:+9779856020179" class="bg-green-500 hover:bg-accent text-white rounded-full p-4 shadow-lg transition flex items-center justify-center animate-bounce tap-target" aria-label="Call Now">
-            <i class="fas fa-phone text-xl"></i>
-        </a>
-    </div>
-
-    <script>
-        // Mobile menu toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('open');
-            // Change icon based on menu state
-            const icon = menuToggle.querySelector('i');
-            if (mobileMenu.classList.contains('open')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-        
-        // Close mobile menu when clicking a link
-        const mobileLinks = mobileMenu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.remove('open');
-                menuToggle.querySelector('i').classList.remove('fa-times');
-                menuToggle.querySelector('i').classList.add('fa-bars');
-            });
-        });
-        
-        // Smooth scrolling for anchor links with offset for fixed header
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const headerHeight = document.querySelector('header').offsetHeight;
-                    window.scrollTo({
-                        top: targetElement.offsetTop - headerHeight,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
-        if (contactForm) {
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Here you would typically send the form data to your server
-                // For demonstration, we'll just show an alert
-                alert('Thank you for your message! We will contact you shortly.');
-                this.reset();
-            });
-        }
-        
-        // Set current year in footer
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
-        // Animate floating CTA
-        const floatingCta = document.getElementById('floating-cta');
-        if (floatingCta) {
-            let isPulsing = false;
-            
-            function pulse() {
-                if (!isPulsing) {
-                    isPulsing = true;
-                    floatingCta.classList.add('animate-pulse');
-                    setTimeout(() => {
-                        floatingCta.classList.remove('animate-pulse');
-                        isPulsing = false;
-                    }, 2000);
-                }
-            }
-            
-            // Pulse every 15 seconds
-            setInterval(pulse, 15000);
-            pulse(); // Initial pulse
-        }
-        
-        // Prevent zoom on input focus on mobile devices
-        document.addEventListener('DOMContentLoaded', function() {
-            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                document.querySelector('meta[name="viewport"]').setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no');
-            }
-        });
-    </script>
+<body class="bg-gray-50">
+<!-- Header -->
+<header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+<div class="container mx-auto px-4 py-2">
+<div class="flex items-center justify-between">
+<!-- Logo -->
+<a href="#" class="flex items-center gap-2 text-3xl font-['architectural'] text-blue-300" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<img src="https://ik.imagekit.io/70al5xvi0/fewacargo%20logo.jpg?updatedAt=1755879337849" alt="Logo" class="w-9 h-9">
+Fewa Cargo Services
+</a>
+<!-- Emergency Contact -->
+<div class="hidden md:flex items-center gap-2 text-red-600">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-phone-fill ri-lg"></i>
+</div>
+<div>
+<p class="text-xs font-medium">Booking: 9851225082</p>
+</div>
+</div>
+<!-- Desktop Navigation -->
+<nav class="hidden lg:flex items-center gap-6">
+<a href="#" class="text-gray-900 hover:text-primary font-medium" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">Home</a>
+<a href="#about" class="text-gray-700 hover:text-primary">About</a>
+<a href="#departments" class="text-gray-700 hover:text-primary">Branches</a>
+<a href="#doctors" class="text-gray-700 hover:text-primary">Staff</a>
+<a href="#services" class="text-gray-700 hover:text-primary">Services</a>
+<a href="#news" class="text-gray-700 hover:text-primary">News</a>
+<a href="#contact" class="text-gray-700 hover:text-primary">Contact</a>
+</nav>
+<!-- Mobile Menu Button -->
+<button class="lg:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobileMenuBtn">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation -->
+<div class="lg:hidden hidden bg-white shadow-lg absolute w-full" id="mobileMenu">
+<div class="container mx-auto px-4 py-3 flex flex-col gap-3">
+<a href="#" class="text-gray-900 hover:text-primary font-medium py-2 border-b border-gray-100" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); mobileMenu.classList.add('hidden');">Home</a>
+<a href="#about" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">About</a>
+<a href="#departments" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">Branches</a>
+<a href="#doctors" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">Staff</a>
+<a href="#services" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">Services</a>
+<a href="#news" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">News</a>
+<a href="#contact" class="text-gray-700 hover:text-primary py-2 border-b border-gray-100">Contact</a>
+<div class="flex items-center gap-2 text-red-600 py-2 border-b border-gray-100">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-phone-fill ri-lg"></i>
+</div>
+<div>
+<p class="text-xs font-medium">Booking:</p>
+<p class="text-sm font-bold">+977 9851225082</p>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section 
+  class="pt-16 relative overflow-hidden min-h-screen" 
+  style="
+    background-image: url('https://ik.imagekit.io/70al5xvi0/ChatGPT%20Image%20Aug%2025,%202025,%2011_12_00%20AM.png?updatedAt=1756099759997'); 
+    background-size: cover; 
+    background-position: cover; 
+    background-repeat: no-repeat;
+  "
+</div>
+</div>
+</section>
+<!-- Key Services Section -->
+<section id="services" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-3">Our Key Services</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">We provide comprehensive Cargo services to meet all your business needs with state-of-the-art facilities and experienced professionals.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Service 1 -->
+<div class="bg-rose-50 p-6 rounded-lg hover:shadow-lg transition group">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4">
+<i class="ri-truck-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Emergency Cargo Delivery</h3>
+<p class="text-gray-600 mb-4">24/7 emergency services with advanced well equipment and specialized professional team to handle your goods delivery on time.</p>
+<a href="#emergency-care" class="text-primary font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+Learn More
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<!-- Service 2 -->
+<div class="bg-sky-50 p-6 rounded-lg hover:shadow-lg transition group">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4">
+<i class="ri-home-8-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Door to Door Collection Services</h3>
+<p class="text-gray-600 mb-4">Comprehensive Cargo collection services from your home or business store with advanced equipment for accurate and timely delivery results.</p>
+<a href="#laboratory" class="text-primary font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+Learn More
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<!-- Service 3 -->
+<div class="bg-violet-50 p-6 rounded-lg hover:shadow-lg transition group">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4">
+<i class="ri-time-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Delivery On Time</h3>
+<p class="text-gray-600 mb-4">State-of-the-art delivery services with care on your business or industry.</p>
+<a href="#radiology" class="text-primary font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+Learn More
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+<!-- Service 4 -->
+<div class="bg-emerald-50 p-6 rounded-lg hover:shadow-lg transition group">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4">
+<i class="ri-map-pin-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Online Tracking</h3>
+<p class="text-gray-600 mb-4">Find where your goods are on the way with our real-time tracking system.</p>
+<a href="#pharmacy" class="text-primary font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+Learn More
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row items-center gap-8">
+<div class="w-full lg:w-1/2">
+<img src="https://ik.imagekit.io/70al5xvi0/ChatGPT%20Image%20Aug%2022,%202025,%2011_20_09%20PM.png?updatedAt=1755884223432" alt="Fewa Cargo Services" class="rounded-lg w-full h-auto object-cover shadow-lg">
+</div>
+<div class="w-full lg:w-1/2">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">About Fewa Cargo Services</h2>
+<p class="text-gray-600 mb-6">Established in 2010, Fewa Cargo Services has been providing quality cargo services to the residents of Pokhara and surrounding areas. Our state-of-the-art facility is equipped with modern cargo collection and delivery system and staffed by experienced cargo professionals dedicated to delivering compassionate transportation on time.</p>
+<p class="text-gray-600 mb-8">We are committed to our mission of improving the collecting and delivery of the cargo we collect through customers doors in cargo delivery.</p>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+<div class="bg-white p-4 rounded-lg text-center shadow-sm">
+<div class="text-3xl font-bold text-primary mb-1">15+</div>
+<div class="text-gray-600 text-sm">Years of Service</div>
+</div>
+<div class="bg-white p-4 rounded-lg text-center shadow-sm">
+<div class="text-3xl font-bold text-primary mb-1">50+</div>
+<div class="text-gray-600 text-sm">Specialised Staff</div>
+</div>
+<div class="bg-white p-4 rounded-lg text-center shadow-sm">
+<div class="text-3xl font-bold text-primary mb-1">100+</div>
+<div class="text-gray-600 text-sm">Own Vehicles</div>
+</div>
+<div class="bg-white p-4 rounded-lg text-center shadow-sm">
+<div class="text-3xl font-bold text-primary mb-1">24/7</div>
+<div class="text-gray-600 text-sm">Emergency Cargo Service</div>
+</div>
+</div>
+<a href="#" class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-opacity-90 transition inline-block">Learn More About Us</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Appointment Section -->
+<section id="appointment" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="flex flex-col lg:flex-row gap-8">
+<div class="w-full lg:w-1/2">
+<h2 class="text-3xl font-bold text-gray-900 mb-3">Online Booking</h2>
+<p class="text-gray-600 mb-8">Schedule a pickup with our specialists. Fill out the form and our team will get back to you within 24 hours.</p>
+<form class="appointment-form space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="fullName" class="block text-gray-700 mb-2">Full Name</label>
+<input type="text" id="fullName" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Enter your full name">
+</div>
+<div>
+<label for="phoneNumber" class="block text-gray-700 mb-2">Phone Number</label>
+<input type="tel" id="phoneNumber" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Enter your phone number">
+</div>
+</div>
+<div>
+<label for="email" class="block text-gray-700 mb-2">Email Address</label>
+<input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Enter your email address">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="department" class="block text-gray-700 mb-2">Pickup Location</label>
+<div class="relative">
+<select id="department" class="w-full px-4 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary pr-8">
+<option value="">Select Location</option>
+<option value="pokhara">Pokhara</option>
+<option value="kathmandu">Kathmandu</option>
+<option value="biratnagar">Biratnagar</option>
+<option value="butwal">Butwal</option>
+<option value="nepalgunj">Nepalgunj</option>
+<option value="dharan">Dharan</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+<div class="w-4 h-4 flex items-center justify-center text-gray-500">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+</div>
+<div>
+<label for="destination" class="block text-gray-700 mb-2">Destination</label>
+<div class="relative">
+<select id="destination" class="w-full px-4 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary pr-8">
+<option value="">Select Destination</option>
+<option value="pokhara">Pokhara</option>
+<option value="kathmandu">Kathmandu</option>
+<option value="biratnagar">Biratnagar</option>
+<option value="butwal">Butwal</option>
+<option value="nepalgunj">Nepalgunj</option>
+<option value="dharan">Dharan</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+<div class="w-4 h-4 flex items-center justify-center text-gray-500">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="pickupDate" class="block text-gray-700 mb-2">Preferred Date</label>
+<input type="date" id="pickupDate" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+</div>
+<div>
+<label for="pickupTime" class="block text-gray-700 mb-2">Preferred Time</label>
+<div class="relative">
+<select id="pickupTime" class="w-full px-4 py-2 border border-gray-300 rounded appearance-none focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary pr-8">
+<option value="">Select Time</option>
+<option value="morning">Morning (9:00 AM - 12:00 PM)</option>
+<option value="afternoon">Afternoon (1:00 PM - 4:00 PM)</option>
+<option value="evening">Evening (5:00 PM - 8:00 PM)</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+<div class="w-4 h-4 flex items-center justify-center text-gray-500">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<label for="message" class="block text-gray-700 mb-2">Additional Information</label>
+<textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Please provide any additional information about your shipment"></textarea>
+</div>
+<div>
+<label class="custom-checkbox">
+<input type="checkbox">
+<span class="checkmark"></span>
+I agree to the terms and conditions and privacy policy
+</label>
+</div>
+<button type="submit" class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-opacity-90 transition w-full md:w-auto">Book Online</button>
+</form>
+</div>
+<div class="w-full lg:w-1/2 bg-gray-50 rounded-lg p-6 md:p-8">
+<h3 class="text-2xl font-semibold text-gray-900 mb-6">Why Choose Us</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full shrink-0">
+<i class="ri-user-star-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-900 mb-1">Experienced Cargo Staff</h4>
+<p class="text-gray-600">Our team consists of highly qualified and experienced cargo professionals dedicated to deliver on time.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full shrink-0">
+<i class="ri-24-hours-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-900 mb-1">24/7 Services</h4>
+<p class="text-gray-600">We provide round-the-clock cargo services to ensure that you receive or send whenever you need it.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full shrink-0">
+<i class="ri-shield-check-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-900 mb-1">Secure Handling</h4>
+<p class="text-gray-600">Your goods are handled with utmost care and security throughout the transportation process.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full shrink-0">
+<i class="ri-price-tag-3-line ri-lg"></i>
+</div>
+<div>
+<h4 class="text-lg font-medium text-gray-900 mb-1">Competitive Pricing</h4>
+<p class="text-gray-600">We offer the most competitive rates in the market without compromising on service quality.</p>
+</div>
+</div>
+</div>
+<div class="mt-8 bg-white p-6 rounded-lg shadow-sm">
+<h4 class="text-lg font-medium text-gray-900 mb-4">Opening Hours</h4>
+<div class="space-y-3">
+<div class="flex justify-between">
+<span class="text-gray-600">Monday - Friday</span>
+<span class="font-medium text-gray-900">8:00 AM - 8:00 PM</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-600">Saturday</span>
+<span class="font-medium text-gray-900">9:00 AM - 6:00 PM</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-600">Sunday</span>
+<span class="font-medium text-gray-900">10:00 AM - 4:00 PM</span>
+</div>
+<div class="flex justify-between text-red-600 font-medium">
+<span>Online Services</span>
+<span>24/7</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- News Section -->
+<section id="news" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-3">Latest News & Updates</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Stay updated with the latest news, offers and information from Fewa Cargo Services.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- News 1 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+<img src="https://ik.imagekit.io/70al5xvi0/ChatGPT%20Image%20Aug%2022,%202025,%2011_20_09%20PM.png?updatedAt=1755884223432" alt="New Delivery Routes" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="flex items-center gap-2 text-gray-500 text-sm mb-2">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-calendar-line"></i>
+</div>
+<span>April 10, 2025</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Expanding Our Delivery Routes</h3>
+<p class="text-gray-600 mb-4">We're excited to announce new delivery routes to serve you better across Nepal.</p>
+<a href="#news" class="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
+Read More
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- News 2 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+<img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=250&q=80" alt="Tracking System Update" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="flex items-center gap-2 text-gray-500 text-sm mb-2">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-calendar-line"></i>
+</div>
+<span>April 5, 2025</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Enhanced Tracking System</h3>
+<p class="text-gray-600 mb-4">Our new real-time tracking system provides better visibility of your shipments.</p>
+<a href="#news" class="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
+Read More
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<!-- News 3 -->
+<div class="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
+<img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=250&q=80" alt="Festival Offer" class="w-full h-48 object-cover">
+<div class="p-6">
+<div class="flex items-center gap-2 text-gray-500 text-sm mb-2">
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-calendar-line"></i>
+</div>
+<span>March 28, 2025</span>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Special Festival Discounts</h3>
+<p class="text-gray-600 mb-4">Enjoy special discounts on our services during the upcoming festival season.</p>
+<a href="#news" class="text-primary font-medium flex items-center gap-1 hover:gap-2 transition-all">
+Read More
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-8">
+<a href="#news" class="bg-white text-primary border border-primary px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-gray-50 transition inline-block">View All News</a>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-3">Clients Testimonials</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Hear what our satisfied customers have to say about our services.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Testimonial 1 -->
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+<div class="flex items-center gap-4 mb-4">
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80" alt="Sarita Adhikari" class="w-16 h-16 rounded-full object-cover">
+<div>
+<h4 class="text-lg font-semibold text-gray-900">Sarita Adhikari</h4>
+<p class="text-gray-500">Industry Owner</p>
+</div>
+</div>
+<p class="text-gray-600 mb-4">"Fewa Cargo has been our trusted logistics partner for years. Their timely delivery and professional handling of our industrial goods have been exceptional."</p>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+<!-- Testimonial 2 -->
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+<div class="flex items-center gap-4 mb-4">
+<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80" alt="Binod Gurung" class="w-16 h-16 rounded-full object-cover">
+<div>
+<h4 class="text-lg font-semibold text-gray-900">Binod Gurung</h4>
+<p class="text-gray-500">Business Owner</p>
+</div>
+</div>
+<p class="text-gray-600 mb-4">"The door-to-door collection service has made my business operations so much easier. Reliable and efficient service every time!"</p>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+<!-- Testimonial 3 -->
+<div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
+<div class="flex items-center gap-4 mb-4">
+<img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&h=100&q=80" alt="Prabha Shrestha" class="w-16 h-16 rounded-full object-cover">
+<div>
+<h4 class="text-lg font-semibold text-gray-900">Prabha Shrestha</p>
+<p class="text-gray-500">Householder</p>
+</div>
+</div>
+<p class="text-gray-600 mb-4">"I regularly send packages to my family in different cities. Fewa Cargo's tracking system gives me peace of mind knowing where my packages are."</p>
+<div class="flex text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Packages Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-3">Service Packages</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Choose from our service packages designed for your specific needs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Basic Package -->
+<div class="bg-red-50 rounded-lg p-6 hover:shadow-md transition">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4">
+<i class="ri-box-1-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Basic Package</h3>
+<p class="text-gray-600 mb-4">Ideal for small parcels and documents with standard delivery.</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Up to 5kg weight</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Standard delivery (3-5 days)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Basic tracking</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Email notifications</span>
+</div>
+</div>
+<div class="text-2xl font-bold text-gray-900 mb-6">NPR 250/-</div>
+<a href="#appointment" class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-opacity-90 transition w-full text-center block">Book Now</a>
+</div>
+<!-- Premium Package -->
+<div class="bg-blue-50 rounded-lg p-6 hover:shadow-md transition">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4">
+<i class="ri-vip-crown-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Premium Package</h3>
+<p class="text-gray-600 mb-4">Perfect for valuable items requiring extra care and faster delivery.</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Up to 20kg weight</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Express delivery (1-2 days)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Real-time tracking</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">SMS & Email notifications</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Insurance coverage</span>
+</div>
+</div>
+<div class="text-2xl font-bold text-gray-900 mb-6">NPR 800/-</div>
+<a href="#appointment" class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-opacity-90 transition w-full text-center block">Book Now</a>
+</div>
+<!-- Business Package -->
+<div class="bg-green-50 rounded-lg p-6 hover:shadow-md transition">
+<div class="w-14 h-14 flex items-center justify-center bg-primary/10 text-primary rounded-lg mb-4">
+<i class="ri-building-2-line ri-2x"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Business Package</h3>
+<p class="text-gray-600 mb-4">Designed for businesses with regular shipping needs and bulk discounts.</p>
+<div class="space-y-2 mb-6">
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Unlimited weight (quotation based)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Priority delivery (1-3 days)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Advanced tracking dashboard</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Dedicated account manager</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Monthly billing & reports</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-4 h-4 flex items-center justify-center text-primary">
+<i class="ri-checkbox-circle-line"></i>
+</div>
+<span class="text-gray-600">Bulk discounts</span>
+</div>
+</div>
+<div class="text-2xl font-bold text-gray-900 mb-6">Custom Pricing</div>
+<a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-opacity-90 transition w-full text-center block">Contact Sales</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-900 mb-3">Contact Us</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Get in touch with us for any inquiries, feedback, or assistance. We're here to help you.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-8">
+<div class="w-full lg:w-1/2">
+<div class="bg-gray-50 overflow-hidden h-full">
+<div id="locationMap" class="h-[600px] w-full relative">
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3531.8616509216945!2d85.2873344754679!3d27.721557576174405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjfCsDQzJzE3LjYiTiA4NcKwMTcnMjMuNyJF!5e0!3m2!1sen!2snp!4v1755953495258!5m2!1sen!2snp" width 400 hight 500></iframe>" 
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-4">Our Location</h3>
+<div class="space-y-4">
+<div class="flex gap-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full shrink-0">
+<i class="ri-map-pin-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Address</h4>
+<p class="text-gray-600">Fewa Cargo Services Pvt. Ltd., Thulo Bharyang, Kathmandu, Nepal</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full shrink-0">
+<i class="ri-phone-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Phone</h4>
+<p class="text-gray-600">+977 01-555555 (Reception)</p>
+<p class="text-gray-600">+977 9851225082 (Emergency)</p>
+</div>
+</div>
+<div class="flex gap-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 text-primary rounded-full shrink-0">
+<i class="ri-mail-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Email</h4>
+<p class="text-gray-600">info@fewacargo.com.np</p>
+<p class="text-gray-600">booking@fewacargo.com.np</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full lg:w-1/2">
+<div class="bg-yellow-50 rounded-lg p-6 md:p-8 h-full">
+<h3 class="text-xl font-semibold text-gray-900 mb-6">Send Us a Message</h3>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label for="contactName" class="block text-gray-700 mb-2">Full Name</label>
+<input type="text" id="contactName" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Enter your full name">
+</div>
+<div>
+<label for="contactEmail" class="block text-gray-700 mb-2">Email Address</label>
+<input type="email" id="contactEmail" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Enter your email address">
+</div>
+</div>
+<div>
+<label for="contactSubject" class="block text-gray-700 mb-2">Subject</label>
+<input type="text" id="contactSubject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Enter subject">
+</div>
+<div>
+<label for="contactMessage" class="block text-gray-700 mb-2">Message</label>
+<textarea id="contactMessage" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Enter your message"></textarea>
+</div>
+<button type="submit" class="bg-primary text-white px-6 py-3 !rounded-button font-medium whitespace-nowrap hover:bg-opacity-90 transition">Send Message</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary text-white pt-16 pb-6">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+<!-- Column 1: About -->
+<div>
+<h3 class="text-xl font-semibold mb-4">About Us</h3>
+<p class="text-gray-300 mb-4">Fewa Cargo Services provides reliable and efficient cargo transportation services across Nepal with a commitment to timely delivery and customer satisfaction.</p>
+<div class="flex gap-4">
+<a href="https://facebook.com" target="_blank" class="w-8 h-8 flex items-center justify-center bg-white/10 hover:bg-primary rounded-full transition">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="https://twitter.com" target="_blank" class="w-8 h-8 flex items-center justify-center bg-white/10 hover:bg-primary rounded-full transition">
+<i class="ri-twitter-x-fill"></i>
+</a>
+<a href="https://instagram.com" target="_blank" class="w-8 h-8 flex items-center justify-center bg-white/10 hover:bg-primary rounded-full transition">
+<i class="ri-instagram-fill"></i>
+</a>
+<a href="https://youtube.com" target="_blank" class="w-8 h-8 flex items-center justify-center bg-white/10 hover:bg-primary rounded-full transition">
+<i class="ri-youtube-fill"></i>
+</a>
+</div>
+</div>
+<!-- Column 2: Quick Links -->
+<div>
+<h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-300 hover:text-white transition">Home</a></li>
+<li><a href="#about" class="text-gray-300 hover:text-white transition">About Us</a></li>
+<li><a href="#services" class="text-gray-300 hover:text-white transition">Services</a></li>
+<li><a href="#doctors" class="text-gray-300 hover:text-white transition">Our Staff</a></li>
+<li><a href="#appointment" class="text-gray-300 hover:text-white transition">Book Online</a></li>
+<li><a href="#news" class="text-gray-300 hover:text-white transition">News & Updates</a></li>
+<li><a href="#contact" class="text-gray-300 hover:text-white transition">Contact Us</a></li>
+</ul>
+</div>
+<!-- Column 3: Opening Hours -->
+<div>
+<h3 class="text-xl font-semibold mb-4">Opening Hours</h3>
+<ul class="space-y-3">
+<li class="flex justify-between">
+<span class="text-gray-300">Monday - Friday</span>
+<span>8:00 AM - 8:00 PM</span>
+</li>
+<li class="flex justify-between">
+<span class="text-gray-300">Saturday</span>
+<span>9:00 AM - 6:00 PM</span>
+</li>
+<li class="flex justify-between">
+<span class="text-gray-300">Sunday</span>
+<span>10:00 AM - 4:00 PM</span>
+</li>
+<li class="flex justify-between font-medium">
+<span class="text-gray-300">Online Services</span>
+<span>24/7</span>
+</li>
+</ul>
+</div>
+<!-- Column 4: Newsletter -->
+<div>
+<h3 class="text-xl font-semibold mb-4">Newsletter</h3>
+<p class="text-gray-300 mb-4">Subscribe to our newsletter to receive the latest updates and special offers.</p>
+<form class="space-y-4">
+<div class="relative">
+<input type="email" placeholder="Enter your email" class="w-full px-4 py-2 bg-white/10 border border-white/20 rounded text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
+</div>
+<button type="submit" class="bg-primary text-white px-4 py-2 !rounded-button font-medium whitespace-nowrap hover:bg-opacity-90 transition w-full">Subscribe</button>
+</form>
+</div>
+</div>
+<div class="pt-6 border-t border-white/10 text-center text-gray-400 text-sm">
+<p>&copy; 2025 Fewa Cargo Services Pvt. Ltd. All rights reserved.</p>
+<p class="mt-1">Developed by <a href="https://ramrajabastakoti.com.np" target="_blank" class="text-primary hover:text-white transition">Ramraja</a></p>
+</div>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Get current location
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(
+function(position) {
+const currentLocation = document.getElementById('currentLocation');
+if(currentLocation) {
+currentLocation.classList.remove('hidden');
+}
+},
+function(error) {
+console.error("Error getting location:", error);
+const locationError = document.createElement('div');
+locationError.className = 'absolute top-4 left-4 bg-red-500 text-white px-4 py-2 rounded shadow-lg';
+locationError.innerHTML = 'Unable to get your location';
+document.getElementById('locationMap').appendChild(locationError);
+}
+);
+}
+// Department slider functionality
+const slideContainer = document.querySelector('.department-scroll');
+if (slideContainer) {
+const slideLeft = document.getElementById('slideLeft');
+const slideRight = document.getElementById('slideRight');
+if (slideLeft && slideRight) {
+slideLeft.addEventListener('click', () => {
+slideContainer.scrollLeft -= 300;
+});
+slideRight.addEventListener('click', () => {
+slideContainer.scrollLeft += 300;
+});
+// Hide/show scroll buttons based on scroll position
+slideContainer.addEventListener('scroll', () => {
+const isAtStart = slideContainer.scrollLeft === 0;
+const isAtEnd = slideContainer.scrollLeft >= (slideContainer.scrollWidth - slideContainer.clientWidth);
+slideLeft.style.opacity = isAtStart ? '0' : '1';
+slideRight.style.opacity = isAtEnd ? '0' : '1';
+slideLeft.style.visibility = isAtStart ? 'hidden' : 'visible';
+slideRight.style.visibility = isAtEnd ? 'hidden' : 'visible';
+});
+// Trigger scroll event initially to set button states
+slideContainer.dispatchEvent(new Event('scroll'));
+}
+}
+// Mobile Menu Toggle
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+if (mobileMenuBtn && mobileMenu) {
+mobileMenuBtn.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+}
+// Create modal for service details
+const modal = document.createElement('div');
+modal.className = 'fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50';
+modal.innerHTML = `
+<div class="bg-white rounded-lg max-w-2xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+<div class="p-6">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-2xl font-bold text-gray-900" id="modalTitle"></h3>
+<button class="text-gray-500 hover:text-gray-700" onclick="closeModal()">
+<i class="ri-close-line ri-2x"></i>
+</button>
+</div>
+<div id="modalContent" class="prose max-w-none"></div>
+</div>
+</div>
+`;
+document.body.appendChild(modal);
+// Service content data
+const serviceContent = {
+'emergency-care': {
+title: 'Emergency Care Services',
+content: `
+<h4 class="text-xl font-semibold mb-4">24/7 Emergency Cargo Services</h4>
+<p class="mb-4">Our emergency department is equipped with specialized vehicles and professionals available round the clock.</p>
+<ul class="list-disc pl-6 mb-4">
+<li>Advanced tracking system</li>
+<li>Priority handling</li>
+<li>Direct communication with driver</li>
+<li>Express delivery options</li>
+<li>Secure handling procedures</li>
+</ul>
+<h4 class="text-xl font-semibold mb-4">Emergency Contact Numbers</h4>
+<p class="mb-4">Emergency Hotline: +977 61-51234</p>
+<p class="mb-4">Mobile: +977 9851225082</p>
+`
+},
+'laboratory': {
+title: 'Door-to-Door Services',
+content: `
+<h4 class="text-xl font-semibold mb-4">Comprehensive Collection Services</h4>
+<p class="mb-4">Our state-of-the-art collection services ensure your packages are picked up from your location at your convenience.</p>
+<ul class="list-disc pl-6 mb-4">
+<li>Flexible scheduling</li>
+<li>Professional handling</li>
+<li>Real-time notifications</li>
+<li>Secure packaging assistance</li>
+<li>Documentation support</li>
+</ul>
+<p class="mb-4">Office Hours: 24/7</p>
+<p>Collection times: 8:00 AM - 8:00 PM</p>
+`
+},
+'radiology': {
+title: 'Timely Delivery Services',
+content: `
+<h4 class="text-xl font-semibold mb-4">Advanced Delivery Services</h4>
+<p class="mb-4">Our delivery services ensure your packages reach their destination safely and on time.</p>
+<ul class="list-disc pl-6 mb-4">
+<li>Real-time tracking</li>
+<li>Multiple delivery options</li>
+<li>Secure handling procedures</li>
+<li>Proof of delivery</li>
+<li>Customer notification system</li>
+</ul>
+<p>Regular Hours: 8:00 AM - 8:00 PM</p>
+<p>Emergency services available 24/7</p>
+`
+}
+};
+// Add click event listeners to all "Learn More" links
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+link.addEventListener('click', function(e) {
+const href = this.getAttribute('href').substring(1);
+if (serviceContent[href]) {
+e.preventDefault();
+openModal(href);
+}
+});
+});
+// Global functions for modal
+window.openModal = function(serviceId) {
+const service = serviceContent[serviceId];
+if (service) {
+document.getElementById('modalTitle').textContent = service.title;
+document.getElementById('modalContent').innerHTML = service.content;
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+};
+window.closeModal = function() {
+modal.classList.add('hidden');
+document.body.style.overflow = '';
+};
+// Close modal when clicking outside
+modal.addEventListener('click', function(e) {
+if (e.target === modal) {
+closeModal();
+}
+});
+// Form Submissions
+const appointmentForm = document.querySelector('.appointment-form');
+if(appointmentForm) {
+appointmentForm.addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Thank you for booking with us. We will contact you shortly.');
+this.reset();
+});
+}
+const contactForm = document.querySelector('#contact form');
+if(contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Thank you for your message. We will get back to you soon.');
+this.reset();
+});
+}
+const newsletterForm = document.querySelector('footer form');
+if(newsletterForm) {
+newsletterForm.addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Thank you for subscribing to our newsletter!');
+this.reset();
+});
+}
+// Smooth scroll for all anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function (e) {
+e.preventDefault();
+const target = document.querySelector(this.getAttribute('href'));
+if(target) {
+target.scrollIntoView({
+behavior: 'smooth'
+});
+// Close mobile menu if open
+if (mobileMenu) {
+mobileMenu.classList.add('hidden');
+}
+}
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Department dropdown change event
+const departmentSelect = document.getElementById('department');
+const doctorSelect = document.getElementById('doctor');
+if (departmentSelect && doctorSelect) {
+departmentSelect.addEventListener('change', function() {
+// Reset doctor options
+doctorSelect.innerHTML = '<option value="">Select Staff</option>';
+// Add relevant staff based on department
+const department = this.value;
+if (department === 'pokhara') {
+addStaffOption('manager-pokhara', 'Manager - Pokhara Branch');
+addStaffOption('supervisor-pokhara', 'Supervisor - Pokhara Branch');
+} else if (department === 'kathmandu') {
+addStaffOption('manager-kathmandu', 'Manager - Kathmandu Branch');
+addStaffOption('supervisor-kathmandu', 'Supervisor - Kathmandu Branch');
+} else if (department === 'biratnagar') {
+addStaffOption('manager-biratnagar', 'Manager - Biratnagar Branch');
+addStaffOption('supervisor-biratnagar', 'Supervisor - Biratnagar Branch');
+}
+});
+function addStaffOption(value, text) {
+const option = document.createElement('option');
+option.value = value;
+option.textContent = text;
+doctorSelect.appendChild(option);
+}
+}
+});
+</script>
 </body>
 </html>
