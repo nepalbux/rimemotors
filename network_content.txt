@@ -1,0 +1,30 @@
+## Our Network
+
+### Main Branch - Kathmandu
+**Address:** [Placeholder for Main Branch Address, e.g., Tripureshwor, Kathmandu]
+**Phone:** [Placeholder for Main Branch Phone, e.g., +977-1-XXXXXXX]
+**Email:** [Placeholder for Main Branch Email, e.g., info@hoannmotors.com.np]
+
+**Google Map:**
+To embed a Google Map, you can use an iframe. Go to Google Maps, search for the location, click on 'Share', then 'Embed a map', and copy the HTML. Replace the placeholder below with the actual iframe code.
+
+```html
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1dXXXXXXXXXXXXXXX!2dXXXXXXXXXXXXXXX!3dXXXXXXXXXXXXXXX!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zM8KwMjcnMjcuMiJOIDg1wrAxNSc0NC42IkU!5e0!3m2!1sen!2snp!4vXXXXXXXXXXXXXXXXX" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+```
+
+### Branch 2 - Pokhara
+**Address:** [Placeholder for Pokhara Branch Address, e.g., Lakeside, Pokhara]
+**Phone:** [Placeholder for Pokhara Branch Phone, e.g., +977-61-XXXXXXX]
+**Email:** [Placeholder for Pokhara Branch Email, e.g., pokhara@hoannmotors.com.np]
+
+**Google Map:**
+[Insert Google Map iframe for Pokhara Branch here]
+
+### Branch 3 - Biratnagar
+**Address:** [Placeholder for Biratnagar Branch Address, e.g., Main Road, Biratnagar]
+**Phone:** [Placeholder for Biratnagar Branch Phone, e.g., +977-21-XXXXXXX]
+**Email:** [Placeholder for Biratnagar Branch Email, e.g., biratnagar@hoannmotors.com.np]
+
+**Google Map:**
+[Insert Google Map iframe for Biratnagar Branch here]
+

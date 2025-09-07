@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Online - Hoann Motors Pvt. Ltd.</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Hoann Motors</h2>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="products.html" class="nav-link">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a href="images.html" class="nav-link">Images</a>
+                </li>
+                <li class="nav-item">
+                    <a href="videos.html" class="nav-link">Videos</a>
+                </li>
+                <li class="nav-item">
+                    <a href="network.html" class="nav-link">Network</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="book-online.html" class="nav-link active">Book Online</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Book Online</h1>
+            <p>Schedule Your Test Drive or Appointment</p>
+        </div>
+    </section>
+
+    <!-- Booking Content -->
+    <section class="booking-content">
+        <div class="container">
+            <div class="booking-grid">
+                <div class="booking-info">
+                    <h2>Why Book Online?</h2>
+                    <div class="booking-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Save Time</h4>
+                                <p>Skip the wait and book your preferred time slot</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <i class="fas fa-calendar-check"></i>
+                            <div>
+                                <h4>Guaranteed Appointment</h4>
+                                <p>Secure your appointment with our sales team</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <i class="fas fa-car"></i>
+                            <div>
+                                <h4>Test Drive Ready</h4>
+                                <p>Your preferred vehicle will be ready for test drive</p>
+                            </div>
+                        </div>
+                        
+                        <div class="benefit-item">
+                            <i class="fas fa-user-tie"></i>
+                            <div>
+                                <h4>Expert Consultation</h4>
+                                <p>Get personalized advice from our experts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="booking-form">
+                    <h3>Book Your Appointment</h3>
+                    <form id="bookingForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bookingEmail">Email Address *</label>
+                                <input type="email" id="bookingEmail" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bookingPhone">Phone Number *</label>
+                                <input type="tel" id="bookingPhone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="carModel">Preferred Car Model *</label>
+                            <select id="carModel" name="carModel" required>
+                                <option value="">Select a car model</option>
+                                <option value="Toyota Camry">Toyota Camry</option>
+                                <option value="Honda Civic">Honda Civic</option>
+                                <option value="Ford F-150">Ford F-150</option>
+                                <option value="BMW 3 Series">BMW 3 Series</option>
+                                <option value="Mercedes-Benz C-Class">Mercedes-Benz C-Class</option>
+                                <option value="Tesla Model 3">Tesla Model 3</option>
+                                <option value="Audi A4">Audi A4</option>
+                                <option value="Hyundai Elantra">Hyundai Elantra</option>
+                                <option value="Kia Seltos">Kia Seltos</option>
+                                <option value="Nissan Alturas">Nissan Alturas</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="appointmentDate">Preferred Date *</label>
+                                <input type="date" id="appointmentDate" name="date" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="appointmentTime">Preferred Time *</label>
+                                <select id="appointmentTime" name="time" required>
+                                    <option value="">Select time</option>
+                                    <option value="09:00">9:00 AM</option>
+                                    <option value="10:00">10:00 AM</option>
+                                    <option value="11:00">11:00 AM</option>
+                                    <option value="12:00">12:00 PM</option>
+                                    <option value="13:00">1:00 PM</option>
+                                    <option value="14:00">2:00 PM</option>
+                                    <option value="15:00">3:00 PM</option>
+                                    <option value="16:00">4:00 PM</option>
+                                    <option value="17:00">5:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="branch">Preferred Branch *</label>
+                            <select id="branch" name="branch" required>
+                                <option value="">Select a branch</option>
+                                <option value="kathmandu">Kathmandu - Main Branch</option>
+                                <option value="pokhara">Pokhara Branch</option>
+                                <option value="biratnagar">Biratnagar Branch</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="serviceType">Service Type *</label>
+                            <select id="serviceType" name="serviceType" required>
+                                <option value="">Select service type</option>
+                                <option value="test-drive">Test Drive</option>
+                                <option value="consultation">Sales Consultation</option>
+                                <option value="financing">Financing Discussion</option>
+                                <option value="trade-in">Trade-in Evaluation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="additionalNotes">Additional Notes</label>
+                            <textarea id="additionalNotes" name="notes" rows="3" placeholder="Any specific requirements or questions..."></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                                <span class="checkmark"></span>
+                                I agree to the <a href="#" target="_blank">Terms and Conditions</a> and <a href="#" target="_blank">Privacy Policy</a>
+                            </label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <span class="checkmark"></span>
+                                Subscribe to our newsletter for latest updates and offers
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Book Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-media">
+        <div class="container">
+            <h2>Follow Us</h2>
+            <div class="social-icons">
+                <a href="https://www.youtube.com/@ptcnepal7047" target="_blank" class="social-icon">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://www.youtube.com/@ptcnepal7047" target="_blank" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+                <a href="https://www.youtube.com/@ptcnepal7047" target="_blank" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/@ptcnepal7047" target="_blank" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Hoann Motors Pvt. Ltd.</h3>
+                    <p>Your trusted car dealer in Kathmandu, Nepal</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="book-online.html">Book Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +977-1-XXXXXXX</p>
+                    <p><i class="fas fa-envelope"></i> info@hoannmotors.com.np</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Kathmandu, Nepal</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Hoann Motors Pvt. Ltd. All rights reserved.</p>
+               
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
